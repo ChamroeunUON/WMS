@@ -1,0 +1,16 @@
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\bin\Debug\WinMessage.exe.config
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\bin\Debug\WinMessage.exe
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\bin\Debug\WinMessage.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.csprojResolveAssemblyReference.cache
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.Properties.Resources.resources
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.csproj.GenerateResource.Cache
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.exe
+D:\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\bin\Debug\WinMessage.exe.config
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\bin\Debug\WinMessage.exe
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\bin\Debug\WinMessage.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.csprojResolveAssemblyReference.cache
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.Properties.Resources.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.csproj.GenerateResource.Cache
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.exe
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinMessage\obj\Debug\WinMessage.pdb

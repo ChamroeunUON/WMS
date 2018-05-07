@@ -1,0 +1,93 @@
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.exe.config
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.exe
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\AttributeLayer.dll
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\BusinessLayer.dll
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DatabaseLayer.dll
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\PresentationLayer.dll
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinMessage.exe
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\AttributeLayer.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\BusinessLayer.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DatabaseLayer.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\PresentationLayer.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinMessage.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.frmCustomer.resources
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.frmCustomerList.resources
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Form1.resources
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.frmMain.resources
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.exe
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.pdb
+D:\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.FormSupplier.frmSupplier.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.exe.config
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.exe
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.exe
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\AttributeLayer.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\BusinessLayer.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DatabaseLayer.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.Instrumentation.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.SuperGrid.Design.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.TreeGX.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\PresentationLayer.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinMessage.exe
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\AttributeLayer.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\BusinessLayer.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DatabaseLayer.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\PresentationLayer.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\WinMessage.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.Instrumentation.xml
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.frmCustomer.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.frmCustomerList.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.FormSupplier.frmSupplier.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Form1.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.frmMain.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+D:\Projects\ProjectC#\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.exe.config
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.exe
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.pdb
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.exe
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\WinForm.pdb
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\AttributeLayer.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\BusinessLayer.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DatabaseLayer.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\PresentationLayer.dll
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\WinMessage.exe
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\AttributeLayer.pdb
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\BusinessLayer.pdb
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DatabaseLayer.pdb
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\PresentationLayer.pdb
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\WinMessage.pdb
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.frmCustomer.resources
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.frmCustomerList.resources
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Administrator.FormSupplier.frmSupplier.resources
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Form1.resources
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.frmMain.resources
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+C:\Users\chamroeun\Desktop\My Project\WarehouseManagementSystem\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache

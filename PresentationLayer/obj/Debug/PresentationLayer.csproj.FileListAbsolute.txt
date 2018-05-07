@@ -1,0 +1,14 @@
+D:\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\PresentationLayer.dll
+D:\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\PresentationLayer.pdb
+D:\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\AttributeLayer.dll
+D:\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\AttributeLayer.pdb
+D:\ProjectC#\WarehouseManagementSystem\PresentationLayer\obj\Debug\PresentationLayer.csprojResolveAssemblyReference.cache
+D:\ProjectC#\WarehouseManagementSystem\PresentationLayer\obj\Debug\PresentationLayer.dll
+D:\ProjectC#\WarehouseManagementSystem\PresentationLayer\obj\Debug\PresentationLayer.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\PresentationLayer.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\PresentationLayer.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\AttributeLayer.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\PresentationLayer\bin\Debug\AttributeLayer.pdb
+D:\Projects\ProjectC#\WarehouseManagementSystem\PresentationLayer\obj\Debug\PresentationLayer.csprojResolveAssemblyReference.cache
+D:\Projects\ProjectC#\WarehouseManagementSystem\PresentationLayer\obj\Debug\PresentationLayer.dll
+D:\Projects\ProjectC#\WarehouseManagementSystem\PresentationLayer\obj\Debug\PresentationLayer.pdb

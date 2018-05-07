@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //using WinForm.FormCustomer;
 using WinForm.Administrator;
-using WinMessage;
+using WinForm.Administrator.FormCategory;
+using WinForm.Administrator.FormSupplier;
+
 
 namespace WinForm
 {
@@ -46,9 +48,7 @@ namespace WinForm
 
         private void buttonItem2_Click_1(object sender, EventArgs e)
         {
-            frmCustomer frm = new frmCustomer();
-            if (CheckFrmExist.frmExist(frm)) return;
-            frm.MdiParent = this;
+            var frm = new frmCustomer {MdiParent = this};
             frm.Show();
             
         }
@@ -76,6 +76,18 @@ namespace WinForm
         private void buttonItem15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonItem5_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSupplier { MdiParent = this };
+            frm.Show();
+        }
+
+        private void buttonItem3_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmCategory { MdiParent = this};
+            frm.Show();
         }
     }
 }

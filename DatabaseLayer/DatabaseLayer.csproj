@@ -46,17 +46,9 @@
     <Compile Include="SupplierData\getSupplierModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AttributeLayer\AttributeLayer.csproj">
-      <Project>{34b6793c-85a5-44a4-8827-49eefe5f58f4}</Project>
-      <Name>AttributeLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PresentationLayer\PresentationLayer.csproj">
       <Project>{fa8e443f-ec61-4dc7-b69b-0ea881667906}</Project>
       <Name>PresentationLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinMessage\WinMessage.csproj">
-      <Project>{cc14e1a8-c0a5-4bda-86d1-89cdd1bb6cf4}</Project>
-      <Name>WinMessage</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

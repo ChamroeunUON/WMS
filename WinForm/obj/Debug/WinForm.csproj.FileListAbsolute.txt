@@ -110,6 +110,8 @@ C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\DevComponents.DotNetBa
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\DevComponents.Instrumentation.xml
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\EntityFramework.xml
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Administrator.FormCategory.FrmCategory.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Administrator.frmCustomer.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Administrator.FormSupplier.frmSupplier.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Form1.resources
@@ -123,12 +125,10 @@ C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.Fix
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.FixCus11.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.FixCus12.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddSupplier.resources
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddProductAndCategory.resources
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddNotePropertyCategory.resources
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddNotePropertyCategory1.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Properties.Resources.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.exe
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.pdb
-C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
-C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddProductAndCategory.resources
-C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Administrator.FormCategory.frmCategory.resources
-C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddNotePropertyCategory.resources
-C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddNotePropertyCategory1.resources

@@ -93,9 +93,9 @@
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
             this.styleManagerAmbient1 = new DevComponents.DotNetBar.StyleManagerAmbient(this.components);
             this.superTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
+            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.Administrator.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
@@ -112,8 +112,8 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.CategorizeMode = DevComponents.DotNetBar.eCategorizeMode.Categories;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.Administrator);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
@@ -179,7 +179,6 @@
             // 
             this.Administrator.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Administrator.TabIndex = 1;
-            this.Administrator.Visible = false;
             // 
             // ribbonBar4
             // 
@@ -269,6 +268,7 @@
             this.Products.Name = "Products";
             this.Products.SubItemsExpandWidth = 14;
             this.Products.Text = "Products";
+            this.Products.Click += new System.EventHandler(this.Products_Click);
             // 
             // Warehouse
             // 
@@ -336,6 +336,7 @@
             this.buttonItem17.Name = "buttonItem17";
             this.buttonItem17.SubItemsExpandWidth = 14;
             this.buttonItem17.Text = "Employee";
+            this.buttonItem17.Click += new System.EventHandler(this.buttonItem17_Click);
             // 
             // ribbonPanel3
             // 
@@ -360,6 +361,7 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 4;
+            this.ribbonPanel3.Visible = false;
             // 
             // ribbonBar6
             // 
@@ -458,6 +460,7 @@
             this.buttonItem4.Name = "buttonItem4";
             this.buttonItem4.SubItemsExpandWidth = 14;
             this.buttonItem4.Text = "Products Measure";
+            this.buttonItem4.Click += new System.EventHandler(this.buttonItem4_Click);
             // 
             // buttonItem20
             // 
@@ -958,6 +961,7 @@
             // 
             // Admin
             // 
+            this.Admin.Checked = true;
             this.Admin.Name = "Admin";
             this.Admin.Panel = this.Administrator;
             this.Admin.Text = "Administrator";
@@ -976,7 +980,6 @@
             // 
             // ribbonTabItem3
             // 
-            this.ribbonTabItem3.Checked = true;
             this.ribbonTabItem3.Name = "ribbonTabItem3";
             this.ribbonTabItem3.Panel = this.ribbonPanel3;
             this.ribbonTabItem3.Text = "Setting";

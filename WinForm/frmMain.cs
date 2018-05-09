@@ -9,8 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //using WinForm.FormCustomer;
 using WinForm.Administrator;
+using WinForm.Administrator.Employee;
+using WinForm.Administrator.frmProduct;
 using WinForm.Administrator.FormCategory;
 using WinForm.Administrator.FormSupplier;
+using WinForm.Setting.FrmMeasure;
 
 
 namespace WinForm
@@ -87,6 +90,24 @@ namespace WinForm
         private void buttonItem3_Click(object sender, EventArgs e)
         {
             var frm = new FrmCategory { MdiParent = this};
+            frm.Show();
+        }
+
+        private void buttonItem4_Click(object sender, EventArgs e)
+        {
+            var frm = new frmMeasure {MdiParent = this};
+            frm.Show();
+        }
+
+        private void buttonItem17_Click(object sender, EventArgs e)
+        {
+            var frm = new frmEmployee {MdiParent = this};
+            frm.Show();
+        }
+
+        private void Products_Click(object sender, EventArgs e)
+        {
+            var frm = new frmProduct {MdiParent = this};
             frm.Show();
         }
     }

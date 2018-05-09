@@ -83,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\Employee\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Employee\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrator\FormCategory\frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,24 @@
     </Compile>
     <Compile Include="Administrator\FormSupplier\frmSupplier.Designer.cs">
       <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\frmProduct\frmPopupCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\frmProduct\frmPopupCategory.Designer.cs">
+      <DependentUpon>frmPopupCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\frmProduct\frmPopupMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\frmProduct\frmPopupMeasure.Designer.cs">
+      <DependentUpon>frmPopupMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\frmProduct\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\frmProduct\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -161,14 +185,77 @@
     <Compile Include="Migrations\201805071803398_AddNotePropertyCategory1.Designer.cs">
       <DependentUpon>201805071803398_AddNotePropertyCategory1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805080729040_AddMeasure.cs" />
+    <Compile Include="Migrations\201805080729040_AddMeasure.Designer.cs">
+      <DependentUpon>201805080729040_AddMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080746403_AddMeasure1.cs" />
+    <Compile Include="Migrations\201805080746403_AddMeasure1.Designer.cs">
+      <DependentUpon>201805080746403_AddMeasure1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080746571_AddMeasure2.cs" />
+    <Compile Include="Migrations\201805080746571_AddMeasure2.Designer.cs">
+      <DependentUpon>201805080746571_AddMeasure2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090604056_editPropertyImage.cs" />
+    <Compile Include="Migrations\201805090604056_editPropertyImage.Designer.cs">
+      <DependentUpon>201805090604056_editPropertyImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090620174_editPropertyImage1.cs" />
+    <Compile Include="Migrations\201805090620174_editPropertyImage1.Designer.cs">
+      <DependentUpon>201805090620174_editPropertyImage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090621406_editPropertyImage2.cs" />
+    <Compile Include="Migrations\201805090621406_editPropertyImage2.Designer.cs">
+      <DependentUpon>201805090621406_editPropertyImage2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090623479_editPropertyImage3.cs" />
+    <Compile Include="Migrations\201805090623479_editPropertyImage3.Designer.cs">
+      <DependentUpon>201805090623479_editPropertyImage3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090718469_addEmployyeeTable.cs" />
+    <Compile Include="Migrations\201805090718469_addEmployyeeTable.Designer.cs">
+      <DependentUpon>201805090718469_addEmployyeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090741038_addEmployyeeTable1.cs" />
+    <Compile Include="Migrations\201805090741038_addEmployyeeTable1.Designer.cs">
+      <DependentUpon>201805090741038_addEmployyeeTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090812378_editImageEmoloyee.cs" />
+    <Compile Include="Migrations\201805090812378_editImageEmoloyee.Designer.cs">
+      <DependentUpon>201805090812378_editImageEmoloyee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091500355_AddMoreProductsProperty.cs" />
+    <Compile Include="Migrations\201805091500355_AddMoreProductsProperty.Designer.cs">
+      <DependentUpon>201805091500355_AddMoreProductsProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091529494_AddMoreProductsProperty1.cs" />
+    <Compile Include="Migrations\201805091529494_AddMoreProductsProperty1.Designer.cs">
+      <DependentUpon>201805091529494_AddMoreProductsProperty1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091751044_AddMoreProductsProperty2.cs" />
+    <Compile Include="Migrations\201805091751044_AddMoreProductsProperty2.Designer.cs">
+      <DependentUpon>201805091751044_AddMoreProductsProperty2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Measure.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\FrmMeasure\frmMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\FrmMeasure\frmMeasure.Designer.cs">
+      <DependentUpon>frmMeasure.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administrator\Employee\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrator\FormCategory\frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +264,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrator\FormSupplier\frmSupplier.resx">
       <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\frmProduct\frmPopupCategory.resx">
+      <DependentUpon>frmPopupCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\frmProduct\frmPopupMeasure.resx">
+      <DependentUpon>frmPopupMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\frmProduct\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -220,6 +316,45 @@
     <EmbeddedResource Include="Migrations\201805071803398_AddNotePropertyCategory1.resx">
       <DependentUpon>201805071803398_AddNotePropertyCategory1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080729040_AddMeasure.resx">
+      <DependentUpon>201805080729040_AddMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080746403_AddMeasure1.resx">
+      <DependentUpon>201805080746403_AddMeasure1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080746571_AddMeasure2.resx">
+      <DependentUpon>201805080746571_AddMeasure2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090604056_editPropertyImage.resx">
+      <DependentUpon>201805090604056_editPropertyImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090620174_editPropertyImage1.resx">
+      <DependentUpon>201805090620174_editPropertyImage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090621406_editPropertyImage2.resx">
+      <DependentUpon>201805090621406_editPropertyImage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090623479_editPropertyImage3.resx">
+      <DependentUpon>201805090623479_editPropertyImage3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090718469_addEmployyeeTable.resx">
+      <DependentUpon>201805090718469_addEmployyeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090741038_addEmployyeeTable1.resx">
+      <DependentUpon>201805090741038_addEmployyeeTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090812378_editImageEmoloyee.resx">
+      <DependentUpon>201805090812378_editImageEmoloyee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091500355_AddMoreProductsProperty.resx">
+      <DependentUpon>201805091500355_AddMoreProductsProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091529494_AddMoreProductsProperty1.resx">
+      <DependentUpon>201805091529494_AddMoreProductsProperty1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091751044_AddMoreProductsProperty2.resx">
+      <DependentUpon>201805091751044_AddMoreProductsProperty2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -230,6 +365,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Setting\FrmMeasure\frmMeasure.resx">
+      <DependentUpon>frmMeasure.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -389,6 +527,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\012-money-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Inventory\" />
+    <Folder Include="POS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

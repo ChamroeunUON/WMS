@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+<<<<<<< HEAD
 using System.Globalization;
+=======
+>>>>>>> 1ae2d7eceb9d55a9a1a36ccf289fa9f629827ed7
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -199,6 +202,52 @@ namespace WinForm.Administrator.frmProduct
                 if (product != null) _appContext.Products.Remove(product);
                 _appContext.SaveChanges();
                 tabControl1_SelectedIndexChanged(null, null);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNameEN.Text))
+            {
+                MessageBox.Show("Name is required");
+                return;
+            }
+            if (_product == null)
+            {
+                var pro = FormData;
+                _appContext.Products.Add(pro);
+                MessageBox.Show("Inserted");
+            }
+            else
+            {
+                _product.NameEn = txtNameEN.Text;
+                _product.NameKh = txtNameKH.Text;
+                _product.Status = (byte) chkActive.CheckState;
+                _product.Note = txtNote.Text;
+                _product.CategoryId = int.Parse(txtCategoryId.Text);
+                _product.MeasureId = int.Parse(txtMeasureId.Text);
+                _product.Cost = float.Parse(txtCost.Text);
+                _product.Price = float.Parse(txtPrice.Text);
+                _product.Photo = ConvertFilterToByte(pictureBox1.ImageLocation);
+                MessageBox.Show("Name is required");
+            }
+            _appContext.SaveChanges();
+            MessageBox.Show("OK");
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.Rows.Clear();
+                var products = _appContext.Products.ToList();
+                foreach (var product in products)
+                    dataGridView1.Rows.Add(product.Id, product.NameEn, product.NameKh, product.CategoryId, product.MeasureId,
+                        product.Cost, product.Price,product.Note,product.Status);
             }
             catch (Exception exception)
             {

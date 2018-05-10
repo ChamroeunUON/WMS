@@ -247,10 +247,13 @@
     <Compile Include="Migrations\201805100834535_editStatus.Designer.cs">
       <DependentUpon>201805100834535_editStatus.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201805101019528_AddTableUser.cs" />
     <Compile Include="Migrations\201805101019528_AddTableUser.Designer.cs">
       <DependentUpon>201805101019528_AddTableUser.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 1ae2d7eceb9d55a9a1a36ccf289fa9f629827ed7
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -377,9 +380,12 @@
     <EmbeddedResource Include="Migrations\201805100834535_editStatus.resx">
       <DependentUpon>201805100834535_editStatus.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201805101019528_AddTableUser.resx">
       <DependentUpon>201805101019528_AddTableUser.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 1ae2d7eceb9d55a9a1a36ccf289fa9f629827ed7
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

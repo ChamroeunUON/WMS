@@ -237,6 +237,10 @@
     <Compile Include="Migrations\201805091751044_AddMoreProductsProperty2.Designer.cs">
       <DependentUpon>201805091751044_AddMoreProductsProperty2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805100834535_editStatus.cs" />
+    <Compile Include="Migrations\201805100834535_editStatus.Designer.cs">
+      <DependentUpon>201805100834535_editStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -354,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805091751044_AddMoreProductsProperty2.resx">
       <DependentUpon>201805091751044_AddMoreProductsProperty2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100834535_editStatus.resx">
+      <DependentUpon>201805100834535_editStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

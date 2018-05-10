@@ -71,6 +71,16 @@ namespace WinForm.Administrator.Employee
             if (openFileDialog.ShowDialog() == DialogResult.OK)
                 pictureBox1.ImageLocation = openFileDialog.FileName;
         }
+        private static Image ConvertByteToImage(byte[] photo)
+        {
+            Image image;
+            using (var memoryStream = new MemoryStream(photo, 0, photo.Length))
+            {
+                memoryStream.Write(photo, 0, photo.Length);
+                image = Image.FromStream(memoryStream, true);
+            }
+            return image;
+        }
 
         private void bnSave_Click(object sender, EventArgs e)
         {
@@ -132,16 +142,7 @@ namespace WinForm.Administrator.Employee
             }
         }
 
-        private static Image ConvertByteToImage(byte[] photo)
-        {
-            Image image;
-            using (var memoryStream = new MemoryStream(photo, 0, photo.Length))
-            {
-                memoryStream.Write(photo, 0, photo.Length);
-                image = Image.FromStream(memoryStream, true);
-            }
-            return image;
-        }
+ 
 
         private void btnEdit_Click(object sender, EventArgs e)
         {

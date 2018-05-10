@@ -37,6 +37,8 @@ namespace WinForm
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
+            var frm = new FrmUser {MdiParent = this};
+            frm.Show();
         }
 
         private void ribbonPanel1_Click(object sender, EventArgs e)

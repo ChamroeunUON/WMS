@@ -20,6 +20,8 @@ namespace WinForm.Models
 
         public float Cost { get; set; }
         public float Price { get; set; }
+
+        
         public byte Status { get; set; }
   
         public int CategoryId { get; set; }

@@ -16,6 +16,8 @@ namespace WinForm.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Measure> Measures { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
+        public DbSet<ProducWarehouse> ProducWarehouses { get; set; }
         public AppContext()
         {
             

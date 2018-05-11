@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WinForm.Models
 {
-    class Category
+    public class Category
     {
         [Key]
         public int Id { get; set; }

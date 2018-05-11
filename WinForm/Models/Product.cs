@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace WinForm.Models
 {
-    class Product
+    public class Product
     {
         public int Id { get; set; }
         [StringLength(255)]

@@ -98,7 +98,7 @@ namespace WinForm.Administrator
                 else
                 {
                     _user.UserNmae = txtUserNmae.Text;
-                    _user.Password = Encryption.Decrypt(Encryption.GetHashKey(Encryption.HashKey), _user.Password);
+                    _user.Password = Encryption.Encrypt(Encryption.GetHashKey(Encryption.HashKey), _user.Password);
                     _user.Note = txtNote.Text;
                     MessageBox.Show("Updated");
                 }

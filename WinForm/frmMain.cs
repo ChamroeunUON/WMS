@@ -13,6 +13,9 @@ using WinForm.Administrator.Employee;
 using WinForm.Administrator.frmProduct;
 using WinForm.Administrator.FormCategory;
 using WinForm.Administrator.FormSupplier;
+using WinForm.Administrator.Warehouse;
+using WinForm.Inventory.ReceivItem;
+using WinForm.Models.Support;
 using WinForm.Setting.FrmMeasure;
 
 
@@ -27,7 +30,8 @@ namespace WinForm
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            var frm = new FormLogin();
+            frm.ShowDialog();
         }
 
         private void Customer_Click(object sender, EventArgs e)
@@ -111,6 +115,34 @@ namespace WinForm
         {
             var frm = new frmProduct {MdiParent = this};
             frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var frm = new FormLogin();
+            frm.ShowDialog();
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(" " + CurrentUser.GetCurrentUser);
+        }
+
+        private void Warehouse_Click(object sender, EventArgs e)
+        {
+            var frm = new FormWarehouse {MdiParent = this};
+            frm.Show();
+        }
+
+        private void buttonItem19_Click(object sender, EventArgs e)
+        {
+            var frm = new FormReceiveItem {MdiParent = this};
+            frm.Show();
+        }
+
+        private void buttonItem23_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

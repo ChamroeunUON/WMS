@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WinForm.Models
 {
-    class Measure
+    public class Measure
     {
         [Key]
         public int Id { get; set; }

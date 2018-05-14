@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using WinForm.Administrator.frmProduct;
 using WinForm.Inventory.ProductMaster;
 using WinForm.Models;
+using WinForm.Models.Support;
 
 namespace WinForm.Inventory.ReceivItem
 {
     public partial class FormReceiveItem : Office2007Form
     {
-        private AppContext _appContext;
+        private readonly AppContext _appContext;
+        private List<Models.Support.Setting> _setting;
+        private int idMax;
+        private ProducWarehouse _producWarehouse;
+
+
         public FormReceiveItem()
         {
             _appContext = new AppContext();
@@ -25,12 +27,18 @@ namespace WinForm.Inventory.ReceivItem
 
         private void FormReceiveItem_Load(object sender, EventArgs e)
         {
-           
+            txtUserId.Text = CurrentUser.GetCurrentUserId.ToString();
+            txtUserName.Text = CurrentUser.GetCurrentUser;
+            var list = _appContext.Transactions.ToList();
+            idMax = list.Equals(null) ? 0 : list.Count;
+            _setting = _appContext.Settings.ToList();
+            foreach (var setting in _setting)
+                txtReceive.Text = setting.ReceivePre + DateTime.Today.Year + DateTime.Today.Month.ToString("D2") +
+                                  DateTime.Today.Day.ToString("D2") + idMax.ToString("D3");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void btnWarehouseId_Click(object sender, EventArgs e)
@@ -57,48 +65,139 @@ namespace WinForm.Inventory.ReceivItem
 
             return qty[0].ToString();
         }
-        
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             try
             {
-
-                if (e.ColumnIndex == 3)
+                if (e.ColumnIndex != 3) return;
+                if (string.IsNullOrWhiteSpace(txtWarehouseId.Text))
                 {
-                    var frmProduct = new FormListProduct();
-                    frmProduct.ShowDialog();
-                    MessageBox.Show(CheckOnhand(1,1));
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
-                    {
-                        if (row.Cells[0].Value == null) break;
-                        if (frmProduct.SelectProduct.Id.Equals(row.Cells[0].Value.ToString()))
-                        {
-                            MessageBox.Show("Aleady Added.");
-                            return;
-                        }
-                    }
-
-                    var dataGridViewRow = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                    dataGridViewRow.Cells[0].Value = frmProduct.SelectProduct.Id;
-                    dataGridViewRow.Cells[1].Value = frmProduct.SelectProduct.NameEn;
-                    dataGridViewRow.Cells[2].Value = frmProduct.SelectProduct.NameKh;
-
-                    dataGridViewRow.Cells[4].Value = CheckOnhand(1,1);
-                    dataGridViewRow.Cells[5].Value = frmProduct.SelectProduct.CategoryId;
-                    dataGridViewRow.Cells[6].Value = frmProduct.SelectProduct.MeasureId;
-                    dataGridViewRow.Cells[7].Value = frmProduct.SelectProduct.Price;
-                    dataGridViewRow.Cells[8].Value = frmProduct.SelectProduct.Cost;
-                    if (e.RowIndex == (dataGridView1.Rows.Count - 1))
-                    {
-                        dataGridView1.Rows.Add(dataGridViewRow);
-                    }
-
+                    MyMessage.Warning("Please Select Warehouse");
+                    return;
                 }
+                if (string.IsNullOrWhiteSpace(txtSupplierId.Text))
+                {
+                    MyMessage.Warning("Please Select Supplier.");
+                    return;
+                }
+                var frmProduct = new FormListProduct();
+                frmProduct.ShowDialog();
+                var wId = int.Parse(txtWarehouseId.Text);
+
+
+                string onhand;
+                try
+                {
+                    var findonhand = _appContext.ProducWarehouses
+                        .Where(id => id.WarehouseId == wId && id.ProductId == frmProduct.SelectProduct.Id)
+                        .Select(warehouse => warehouse.OnHand).FirstOrDefault();
+                    onhand = findonhand.ToString();
+                }
+                catch (ArgumentNullException)
+                {
+                    onhand = "0";
+                }
+
+
+                if (dataGridView1.Rows.Cast<DataGridViewRow>()
+                    .TakeWhile(row => row.Cells[0].Value != null)
+                    .Any(row => frmProduct.Product.Id.ToString() == row.Cells[0].Value.ToString()))
+                {
+                    MyMessage.Warning("Aleady added");
+                    return;
+                }
+
+                var dataGridViewRow = (DataGridViewRow) dataGridView1.Rows[0].Clone();
+                dataGridViewRow.Cells[0].Value = frmProduct.SelectProduct.Id;
+                dataGridViewRow.Cells[1].Value = frmProduct.SelectProduct.NameEn;
+                dataGridViewRow.Cells[2].Value = frmProduct.SelectProduct.NameKh;
+                // index 3 is for button
+                dataGridViewRow.Cells[4].Value = onhand;
+                dataGridViewRow.Cells[5].Value = "0";
+                dataGridViewRow.Cells[6].Value = "0";
+                dataGridViewRow.Cells[7].Value = frmProduct.SelectProduct.Price;
+
+                var cost = frmProduct.SelectProduct.Cost;
+                dataGridViewRow.Cells[8].Value = frmProduct.SelectProduct.Cost;
+                dataGridViewRow.Cells[9].Value = "";
+                dataGridViewRow.Cells[10].Value = "";
+
+                if (e.RowIndex == dataGridView1.Rows.Count - 1)
+                    dataGridView1.Rows.Add(dataGridViewRow);
             }
             catch (Exception exception)
             {
                 MessageBox.Show("Error :" + exception, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            // ReSharper disable once SwitchStatementMissingSomeCases
+            switch (e.ColumnIndex)
+            {
+                case 5:
+                    if (dataGridView1.Rows.Count > 0)
+                    {
+                        var rowIndex = dataGridView1.CurrentCell.RowIndex;
+                        var qty = float.Parse(dataGridView1.Rows[rowIndex].Cells[5].Value.ToString());
+                        var cost = float.Parse(dataGridView1.Rows[rowIndex].Cells[8].Value.ToString());
+                        var amount = qty * cost;
+
+                        dataGridView1.Rows[rowIndex].Cells[9].Value = amount;
+                    }
+                    break;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                for (var row = 0; row < dataGridView1.RowCount - 1; row++)
+                {
+                    var wareId = int.Parse(txtWarehouseId.Text);
+                    var proId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString());
+                    var producWarehouse = _appContext.ProducWarehouses.Find(proId, wareId);
+                    var onhand = int.Parse(dataGridView1.Rows[row].Cells[4].Value.ToString());
+                    if (producWarehouse != null)
+                    {
+                        onhand = onhand + int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString());
+                        producWarehouse.WarehouseId = int.Parse(txtWarehouseId.Text);
+                        producWarehouse.ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString());
+                        producWarehouse.OnHand = onhand;
+                        producWarehouse.Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString());
+                        producWarehouse.AlertQty = int.Parse(dataGridView1.Rows[row].Cells[6].Value.ToString());
+                        producWarehouse.SupplierId = int.Parse(txtSupplierId.Text);
+                        producWarehouse.Note = dataGridView1.Rows[row].Cells[10].Value.ToString();
+                        producWarehouse.SaleOrderQty = 0;
+                        _appContext.Entry(producWarehouse).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        _producWarehouse = new ProducWarehouse
+                        {
+                            WarehouseId = int.Parse(txtWarehouseId.Text),
+                            ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString()),
+                            OnHand = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
+                            Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
+                            AlertQty = int.Parse(dataGridView1.Rows[row].Cells[6].Value.ToString()),
+                            SupplierId = int.Parse(txtSupplierId.Text),
+                            Note = dataGridView1.Rows[row].Cells[10].Value.ToString(),
+                            SaleOrderQty = 0
+                        };
+                        _appContext.ProducWarehouses.Add(_producWarehouse);
+                    }
+                }
+                if (_appContext == null) MyMessage.Warning("No Data");
+                if (_appContext != null && _appContext.SaveChanges() != 0)
+                    MyMessage.Success("Successfully");
+                dataGridView1.Rows.Clear();
+            }
+            catch (Exception exception)
+            {
+                MyMessage.Error(exception.ToString());
             }
         }
     }

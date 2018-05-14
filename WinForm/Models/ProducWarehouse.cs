@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WinForm.Models
 {
-    class ProducWarehouse
+    public class ProducWarehouse
     {
         [Key]
         [Column(Order = 0)]
@@ -19,8 +19,8 @@ namespace WinForm.Models
         public int WarehouseId { get; set; }
         public Warehouse Warehouse { get; set; }
 
-        public int  SupplierId { get; set; }
-        public Supplier Supplier { get; set; }
+        public int?  SupplierId { get; set; }
+        
         public int Qty { get; set; }
         public int OnHand { get; set; }
         public int AlertQty { get; set; }

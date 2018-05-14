@@ -17,6 +17,7 @@ using WinForm.Administrator.Warehouse;
 using WinForm.Inventory.ReceivItem;
 using WinForm.Models.Support;
 using WinForm.Setting.FrmMeasure;
+using WinForm.Setting.POSSetting;
 
 
 namespace WinForm
@@ -97,6 +98,7 @@ namespace WinForm
         {
             var frm = new FrmCategory { MdiParent = this};
             frm.Show();
+            
         }
 
         private void buttonItem4_Click(object sender, EventArgs e)
@@ -125,7 +127,7 @@ namespace WinForm
 
         private void btnSupplier_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(" " + CurrentUser.GetCurrentUser);
+            MessageBox.Show(" " + CurrentUser.GetCurrentUser+ "  "+ CurrentUser.GetCurrentUserId);
         }
 
         private void Warehouse_Click(object sender, EventArgs e)
@@ -141,6 +143,18 @@ namespace WinForm
         }
 
         private void buttonItem23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPosSetting_Click(object sender, EventArgs e)
+        {
+            var frm = new FormPOSSetting {MdiParent = this};
+            frm.Show();
+
+        }
+
+        private void buttonItem21_Click(object sender, EventArgs e)
         {
 
         }

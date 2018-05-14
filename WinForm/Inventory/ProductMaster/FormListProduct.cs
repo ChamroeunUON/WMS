@@ -49,9 +49,10 @@ namespace WinForm.Inventory.ProductMaster
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-            var pro = _appContext.Products.Find(id);
+            var productId = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            var pro = _appContext.Products.Find(productId);
             SelectProduct = pro;
+            if (pro != null) pro.Id = productId;
             Close();
         }
     }

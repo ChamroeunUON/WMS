@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinForm.Models
 {
-    internal class Warehouse
+    public class Warehouse
     {
         public int Id { set; get; }
         public string NameEN { set; get; }

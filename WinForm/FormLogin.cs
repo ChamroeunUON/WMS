@@ -40,6 +40,7 @@ namespace WinForm
                         if (pwd == txtpwd.Text)
                         {
                             CurrentUser.GetCurrentUser = txtUserName.Text;
+                            CurrentUser.GetCurrentUserId = user.Id;
                             this.Hide();
                         }
                             

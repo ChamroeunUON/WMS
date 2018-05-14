@@ -325,6 +325,22 @@
     <Compile Include="Migrations\201805111306065_AddOnHandToProducWarehouse.Designer.cs">
       <DependentUpon>201805111306065_AddOnHandToProducWarehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805120849290_removeSupplierProWarehouse.cs" />
+    <Compile Include="Migrations\201805120849290_removeSupplierProWarehouse.Designer.cs">
+      <DependentUpon>201805120849290_removeSupplierProWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805121700371_addTransactionAndTransactionItem.cs" />
+    <Compile Include="Migrations\201805121700371_addTransactionAndTransactionItem.Designer.cs">
+      <DependentUpon>201805121700371_addTransactionAndTransactionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805121755001_AddSettingTable.cs" />
+    <Compile Include="Migrations\201805121755001_AddSettingTable.Designer.cs">
+      <DependentUpon>201805121755001_AddSettingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805131155212_NotRequireSupplierId.cs" />
+    <Compile Include="Migrations\201805131155212_NotRequireSupplierId.Designer.cs">
+      <DependentUpon>201805131155212_NotRequireSupplierId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -336,8 +352,13 @@
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Support\CurrentUser.cs" />
     <Compile Include="Models\Support\Encryption.cs" />
+    <Compile Include="Models\Support\Setting.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\TransactionItem.cs" />
+    <Compile Include="Models\TransactionType.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Warehouse.cs" />
+    <Compile Include="MyMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\FrmMeasure\frmMeasure.cs">
@@ -345,6 +366,12 @@
     </Compile>
     <Compile Include="Setting\FrmMeasure\frmMeasure.Designer.cs">
       <DependentUpon>frmMeasure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\POSSetting\TxtInvoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\POSSetting\TxtInvoi.Designer.cs">
+      <DependentUpon>TxtInvoi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administrator\Employee\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
@@ -502,6 +529,18 @@
     <EmbeddedResource Include="Migrations\201805111306065_AddOnHandToProducWarehouse.resx">
       <DependentUpon>201805111306065_AddOnHandToProducWarehouse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120849290_removeSupplierProWarehouse.resx">
+      <DependentUpon>201805120849290_removeSupplierProWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121700371_addTransactionAndTransactionItem.resx">
+      <DependentUpon>201805121700371_addTransactionAndTransactionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121755001_AddSettingTable.resx">
+      <DependentUpon>201805121755001_AddSettingTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805131155212_NotRequireSupplierId.resx">
+      <DependentUpon>201805131155212_NotRequireSupplierId.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -514,6 +553,9 @@
     </Compile>
     <EmbeddedResource Include="Setting\FrmMeasure\frmMeasure.resx">
       <DependentUpon>frmMeasure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\POSSetting\TxtInvoi.resx">
+      <DependentUpon>TxtInvoi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

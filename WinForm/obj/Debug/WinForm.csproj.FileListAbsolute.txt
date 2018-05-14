@@ -225,3 +225,9 @@ C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Inventory.Product
 C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Inventory.ProductMaster.FormListWarehouse.resources
 C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Administrator.frmProduct.FormListSupplier.resources
 C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Inventory.ProductMaster.FormListProduct.resources
+C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Migrations.removeSupplierProWarehouse.resources
+C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Migrations.addTransactionAndTransactionItem.resources
+C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Migrations.AddSettingTable.resources
+C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Setting.POSSetting.FormPOSSetting.resources
+C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+C:\Users\chamroeun\Desktop\MyWMS\WMS\WinForm\obj\Debug\WinForm.Migrations.NotRequireSupplierId.resources

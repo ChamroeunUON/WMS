@@ -52,7 +52,7 @@ namespace WinForm.Setting.FrmMeasure
             {
                 if (string.IsNullOrWhiteSpace(txtName.Text))
                 {
-                    MessageBox.Show("Name is required.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Name is required.", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (_measure == null)
@@ -67,11 +67,11 @@ namespace WinForm.Setting.FrmMeasure
                 }
                 _appContext.SaveChanges();
                 _measure = null;
-                MessageBox.Show("Successfuly", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfuly", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error : "+exception, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error : "+exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -89,7 +89,7 @@ namespace WinForm.Setting.FrmMeasure
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error :"+exception, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :"+exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -106,7 +106,7 @@ namespace WinForm.Setting.FrmMeasure
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error :"+exception, "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :"+exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -114,7 +114,7 @@ namespace WinForm.Setting.FrmMeasure
         {
             try
             {
-                var dialogResult = MessageBox.Show("Are you sure delete this measure?", "Confirm",
+                var dialogResult = MessageBox.Show("Are you sure delete this measure?", @"Message",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult != DialogResult.Yes) return;
                 var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
@@ -125,7 +125,7 @@ namespace WinForm.Setting.FrmMeasure
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error :" + exception, "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

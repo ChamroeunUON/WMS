@@ -99,12 +99,12 @@ namespace WinForm.Administrator
                 }
                 _appContext.SaveChanges();
                 _customer = null;
-                MessageBox.Show("Successfuly", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfuly", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception+" ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exception+" ", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
           
@@ -157,7 +157,7 @@ namespace WinForm.Administrator
         private void button5_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure want to delete this customer?",
-                "Confirm Message", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                @"Message", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (dialogResult != DialogResult.Yes)
             {
                 return;

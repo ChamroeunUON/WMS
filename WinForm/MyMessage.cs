@@ -11,17 +11,17 @@ namespace WinForm
     {
         public static DialogResult Warning(string msg)
         {
-            return MessageBox.Show(msg, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return MessageBox.Show(msg, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public static DialogResult Success(string msg)
         {
-            return MessageBox.Show(msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return MessageBox.Show(msg, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         public static DialogResult Error(string msg)
         {
-            return MessageBox.Show(msg, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return MessageBox.Show(msg, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

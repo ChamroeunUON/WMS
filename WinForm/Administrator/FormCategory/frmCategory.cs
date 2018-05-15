@@ -47,7 +47,7 @@ namespace WinForm.Administrator.FormCategory
             {
                 if (string.IsNullOrWhiteSpace(txtName.Text))
                 {
-                    MessageBox.Show("Name is required.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Name is required.", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (string.IsNullOrWhiteSpace(txtNote.Text))
@@ -64,11 +64,11 @@ namespace WinForm.Administrator.FormCategory
                 }
                 _appContext.SaveChanges();
                 _category = null;
-                MessageBox.Show("Successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfully.", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Meassge: "+ exception, "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Meassge: "+ exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -88,7 +88,7 @@ namespace WinForm.Administrator.FormCategory
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Meassge: " + exception, "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Meassge: " + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -105,7 +105,7 @@ namespace WinForm.Administrator.FormCategory
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Meassge: " + exception, "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Meassge: " + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
         }
@@ -120,7 +120,7 @@ namespace WinForm.Administrator.FormCategory
             try
             {
                 DialogResult dialogResult = MessageBox.Show("Are you sure want delete this Category?",
-                    "Confirm Information", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    @"Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
@@ -138,7 +138,7 @@ namespace WinForm.Administrator.FormCategory
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Meassge: " + exception, "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Meassge: " + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

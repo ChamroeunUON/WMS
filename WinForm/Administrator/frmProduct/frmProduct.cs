@@ -110,7 +110,7 @@ namespace WinForm.Administrator.frmProduct
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message :" + exception, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error Message :" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -137,7 +137,7 @@ namespace WinForm.Administrator.frmProduct
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Message:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -183,7 +183,7 @@ namespace WinForm.Administrator.frmProduct
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Message:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -191,7 +191,7 @@ namespace WinForm.Administrator.frmProduct
         {
             try
             {
-                var dialog = MessageBox.Show("Are you sure want to delete this employee?", "Confirm",
+                var dialog = MessageBox.Show("Are you sure want to delete this employee?", @"Message",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialog != DialogResult.Yes) return;
                 var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
@@ -202,7 +202,7 @@ namespace WinForm.Administrator.frmProduct
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Message:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

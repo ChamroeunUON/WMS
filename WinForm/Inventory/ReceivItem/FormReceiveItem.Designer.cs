@@ -31,33 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtDate = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtReceive = new System.Windows.Forms.TextBox();
-            this.txtSupplier = new System.Windows.Forms.TextBox();
-            this.txtWarehouse = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSupplierId = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNote = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtWarehouseId = new System.Windows.Forms.TextBox();
-            this.btnSupplierId = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnWarehouseId = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtTotalAmount = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtSynNote = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtUserId = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +45,30 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTotalAmount = new System.Windows.Forms.TextBox();
+            this.txtReceiveId = new System.Windows.Forms.TextBox();
+            this.txtUserId = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtSupplier = new System.Windows.Forms.TextBox();
+            this.txtWarehouse = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSupplierId = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSynNote = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtWarehouseId = new System.Windows.Forms.TextBox();
+            this.btnSupplierId = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnWarehouseId = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -97,11 +97,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.txtDate);
             this.tabPage1.Controls.Add(this.btnSave);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.txtTotalAmount);
-            this.tabPage1.Controls.Add(this.txtReceive);
+            this.tabPage1.Controls.Add(this.txtReceiveId);
             this.tabPage1.Controls.Add(this.txtUserId);
             this.tabPage1.Controls.Add(this.txtUserName);
             this.tabPage1.Controls.Add(this.txtSupplier);
@@ -131,13 +131,13 @@
             this.tabPage1.Text = "New";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // txtDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(814, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker1.TabIndex = 18;
+            this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDate.Location = new System.Drawing.Point(814, 69);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(186, 20);
+            this.txtDate.TabIndex = 18;
             // 
             // btnSave
             // 
@@ -172,205 +172,6 @@
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
-            // 
-            // txtReceive
-            // 
-            this.txtReceive.Location = new System.Drawing.Point(814, 25);
-            this.txtReceive.Name = "txtReceive";
-            this.txtReceive.Size = new System.Drawing.Size(186, 20);
-            this.txtReceive.TabIndex = 11;
-            // 
-            // txtSupplier
-            // 
-            this.txtSupplier.Location = new System.Drawing.Point(496, 70);
-            this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.Size = new System.Drawing.Size(245, 20);
-            this.txtSupplier.TabIndex = 11;
-            // 
-            // txtWarehouse
-            // 
-            this.txtWarehouse.Location = new System.Drawing.Point(496, 25);
-            this.txtWarehouse.Name = "txtWarehouse";
-            this.txtWarehouse.Size = new System.Drawing.Size(245, 20);
-            this.txtWarehouse.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(747, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "ReceiveId";
-            // 
-            // txtSupplierId
-            // 
-            this.txtSupplierId.Location = new System.Drawing.Point(127, 67);
-            this.txtSupplierId.Name = "txtSupplierId";
-            this.txtSupplierId.Size = new System.Drawing.Size(226, 20);
-            this.txtSupplierId.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(747, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "ReceiveId";
-            // 
-            // txtNote
-            // 
-            this.txtNote.Location = new System.Drawing.Point(127, 167);
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(226, 20);
-            this.txtNote.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(429, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Supplier";
-            // 
-            // txtWarehouseId
-            // 
-            this.txtWarehouseId.Location = new System.Drawing.Point(127, 22);
-            this.txtWarehouseId.Name = "txtWarehouseId";
-            this.txtWarehouseId.Size = new System.Drawing.Size(226, 20);
-            this.txtWarehouseId.TabIndex = 15;
-            // 
-            // btnSupplierId
-            // 
-            this.btnSupplierId.Location = new System.Drawing.Point(369, 67);
-            this.btnSupplierId.Name = "btnSupplierId";
-            this.btnSupplierId.Size = new System.Drawing.Size(41, 21);
-            this.btnSupplierId.TabIndex = 9;
-            this.btnSupplierId.Text = "...";
-            this.btnSupplierId.UseVisualStyleBackColor = true;
-            this.btnSupplierId.Click += new System.EventHandler(this.btnSupplierId_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(429, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Warehouse";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "SupplierId";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Note";
-            // 
-            // btnWarehouseId
-            // 
-            this.btnWarehouseId.Location = new System.Drawing.Point(369, 22);
-            this.btnWarehouseId.Name = "btnWarehouseId";
-            this.btnWarehouseId.Size = new System.Drawing.Size(41, 21);
-            this.btnWarehouseId.TabIndex = 10;
-            this.btnWarehouseId.Text = "...";
-            this.btnWarehouseId.UseVisualStyleBackColor = true;
-            this.btnWarehouseId.Click += new System.EventHandler(this.btnWarehouseId_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "WarehouseId";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1043, 435);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "List";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // txtTotalAmount
-            // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(953, 452);
-            this.txtTotalAmount.Name = "txtTotalAmount";
-            this.txtTotalAmount.Size = new System.Drawing.Size(186, 20);
-            this.txtTotalAmount.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(872, 455);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Total Amount";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(430, 170);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 13);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "SysNote";
-            // 
-            // txtSynNote
-            // 
-            this.txtSynNote.Location = new System.Drawing.Point(496, 167);
-            this.txtSynNote.Name = "txtSynNote";
-            this.txtSynNote.Size = new System.Drawing.Size(245, 20);
-            this.txtSynNote.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(55, 118);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "UserId";
-            // 
-            // txtUserId
-            // 
-            this.txtUserId.Location = new System.Drawing.Point(127, 115);
-            this.txtUserId.Name = "txtUserId";
-            this.txtUserId.Size = new System.Drawing.Size(226, 20);
-            this.txtUserId.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(429, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 13);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "UserName";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(496, 115);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(245, 20);
-            this.txtUserName.TabIndex = 11;
             // 
             // Column1
             // 
@@ -431,6 +232,205 @@
             this.Column11.HeaderText = "Note";
             this.Column11.Name = "Column11";
             // 
+            // txtTotalAmount
+            // 
+            this.txtTotalAmount.Location = new System.Drawing.Point(953, 452);
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.Size = new System.Drawing.Size(186, 20);
+            this.txtTotalAmount.TabIndex = 11;
+            // 
+            // txtReceiveId
+            // 
+            this.txtReceiveId.Location = new System.Drawing.Point(814, 25);
+            this.txtReceiveId.Name = "txtReceiveId";
+            this.txtReceiveId.Size = new System.Drawing.Size(186, 20);
+            this.txtReceiveId.TabIndex = 11;
+            // 
+            // txtUserId
+            // 
+            this.txtUserId.Location = new System.Drawing.Point(127, 115);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(226, 20);
+            this.txtUserId.TabIndex = 11;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(496, 115);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(245, 20);
+            this.txtUserName.TabIndex = 11;
+            // 
+            // txtSupplier
+            // 
+            this.txtSupplier.Location = new System.Drawing.Point(496, 70);
+            this.txtSupplier.Name = "txtSupplier";
+            this.txtSupplier.Size = new System.Drawing.Size(245, 20);
+            this.txtSupplier.TabIndex = 11;
+            // 
+            // txtWarehouse
+            // 
+            this.txtWarehouse.Location = new System.Drawing.Point(496, 25);
+            this.txtWarehouse.Name = "txtWarehouse";
+            this.txtWarehouse.Size = new System.Drawing.Size(245, 20);
+            this.txtWarehouse.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(872, 455);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Total Amount";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(747, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "ReceiveId";
+            // 
+            // txtSupplierId
+            // 
+            this.txtSupplierId.Location = new System.Drawing.Point(127, 67);
+            this.txtSupplierId.Name = "txtSupplierId";
+            this.txtSupplierId.Size = new System.Drawing.Size(226, 20);
+            this.txtSupplierId.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(747, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "ReceiveId";
+            // 
+            // txtSynNote
+            // 
+            this.txtSynNote.Location = new System.Drawing.Point(496, 167);
+            this.txtSynNote.Name = "txtSynNote";
+            this.txtSynNote.Size = new System.Drawing.Size(245, 20);
+            this.txtSynNote.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(55, 118);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "UserId";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(429, 118);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "UserName";
+            // 
+            // txtNote
+            // 
+            this.txtNote.Location = new System.Drawing.Point(127, 167);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(226, 20);
+            this.txtNote.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(429, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Supplier";
+            // 
+            // txtWarehouseId
+            // 
+            this.txtWarehouseId.Location = new System.Drawing.Point(127, 22);
+            this.txtWarehouseId.Name = "txtWarehouseId";
+            this.txtWarehouseId.Size = new System.Drawing.Size(226, 20);
+            this.txtWarehouseId.TabIndex = 15;
+            // 
+            // btnSupplierId
+            // 
+            this.btnSupplierId.Location = new System.Drawing.Point(369, 67);
+            this.btnSupplierId.Name = "btnSupplierId";
+            this.btnSupplierId.Size = new System.Drawing.Size(41, 21);
+            this.btnSupplierId.TabIndex = 9;
+            this.btnSupplierId.Text = "...";
+            this.btnSupplierId.UseVisualStyleBackColor = true;
+            this.btnSupplierId.Click += new System.EventHandler(this.btnSupplierId_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(429, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Warehouse";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(430, 170);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 13);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "SysNote";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(55, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "SupplierId";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(52, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Note";
+            // 
+            // btnWarehouseId
+            // 
+            this.btnWarehouseId.Location = new System.Drawing.Point(369, 22);
+            this.btnWarehouseId.Name = "btnWarehouseId";
+            this.btnWarehouseId.Size = new System.Drawing.Size(41, 21);
+            this.btnWarehouseId.TabIndex = 10;
+            this.btnWarehouseId.Text = "...";
+            this.btnWarehouseId.UseVisualStyleBackColor = true;
+            this.btnWarehouseId.Click += new System.EventHandler(this.btnWarehouseId_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "WarehouseId";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1156, 486);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "List";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // FormReceiveItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,9 +470,9 @@
         private System.Windows.Forms.Button btnWarehouseId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox txtReceive;
+        private System.Windows.Forms.TextBox txtReceiveId;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTotalAmount;
         private System.Windows.Forms.Label label8;

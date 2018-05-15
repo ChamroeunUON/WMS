@@ -341,6 +341,30 @@
     <Compile Include="Migrations\201805131155212_NotRequireSupplierId.Designer.cs">
       <DependentUpon>201805131155212_NotRequireSupplierId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805141613219_AddDataToTransaction.cs" />
+    <Compile Include="Migrations\201805141613219_AddDataToTransaction.Designer.cs">
+      <DependentUpon>201805141613219_AddDataToTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805141621217_AddUserToTransaction.cs" />
+    <Compile Include="Migrations\201805141621217_AddUserToTransaction.Designer.cs">
+      <DependentUpon>201805141621217_AddUserToTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805141626194_AddUserToTransaction1.cs" />
+    <Compile Include="Migrations\201805141626194_AddUserToTransaction1.Designer.cs">
+      <DependentUpon>201805141626194_AddUserToTransaction1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805151249246_EditMore.cs" />
+    <Compile Include="Migrations\201805151249246_EditMore.Designer.cs">
+      <DependentUpon>201805151249246_EditMore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805151310522_AddProToTransactionItem.cs" />
+    <Compile Include="Migrations\201805151310522_AddProToTransactionItem.Designer.cs">
+      <DependentUpon>201805151310522_AddProToTransactionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805151505216_removeQtyTransactionItem.cs" />
+    <Compile Include="Migrations\201805151505216_removeQtyTransactionItem.Designer.cs">
+      <DependentUpon>201805151505216_removeQtyTransactionItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -540,6 +564,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805131155212_NotRequireSupplierId.resx">
       <DependentUpon>201805131155212_NotRequireSupplierId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805141613219_AddDataToTransaction.resx">
+      <DependentUpon>201805141613219_AddDataToTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805141621217_AddUserToTransaction.resx">
+      <DependentUpon>201805141621217_AddUserToTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805141626194_AddUserToTransaction1.resx">
+      <DependentUpon>201805141626194_AddUserToTransaction1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805151249246_EditMore.resx">
+      <DependentUpon>201805151249246_EditMore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805151310522_AddProToTransactionItem.resx">
+      <DependentUpon>201805151310522_AddProToTransactionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805151505216_removeQtyTransactionItem.resx">
+      <DependentUpon>201805151505216_removeQtyTransactionItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

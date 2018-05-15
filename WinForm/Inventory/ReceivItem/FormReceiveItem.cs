@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
@@ -15,9 +16,9 @@ namespace WinForm.Inventory.ReceivItem
     {
         private readonly AppContext _appContext;
         private List<Models.Support.Setting> _setting;
-        private int idMax;
+        private int _idMax;
         private ProducWarehouse _producWarehouse;
-
+        private List<TransactionItem> _transactionItems;
 
         public FormReceiveItem()
         {
@@ -30,11 +31,11 @@ namespace WinForm.Inventory.ReceivItem
             txtUserId.Text = CurrentUser.GetCurrentUserId.ToString();
             txtUserName.Text = CurrentUser.GetCurrentUser;
             var list = _appContext.Transactions.ToList();
-            idMax = list.Equals(null) ? 0 : list.Count;
+            _idMax = list.Equals(null) ? 0 : list.Count;
             _setting = _appContext.Settings.ToList();
             foreach (var setting in _setting)
-                txtReceive.Text = setting.ReceivePre + DateTime.Today.Year + DateTime.Today.Month.ToString("D2") +
-                                  DateTime.Today.Day.ToString("D2") + idMax.ToString("D3");
+                txtReceiveId.Text = setting.ReceivePre + DateTime.Today.Year + DateTime.Today.Month.ToString("D2") +
+                                  DateTime.Today.Day.ToString("D2") + _idMax.ToString("D3");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -55,15 +56,6 @@ namespace WinForm.Inventory.ReceivItem
             frm.ShowDialog();
             txtSupplierId.Text = frm.SupplierId;
             txtSupplier.Text = frm.SupplierName;
-        }
-
-        private string CheckOnhand(int warehouseId, int proId)
-        {
-            var qty = _appContext.ProducWarehouses
-                .Where(id => id.WarehouseId == warehouseId && id.ProductId == proId)
-                .Select(w => w.OnHand).ToList();
-
-            return qty[0].ToString();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -118,7 +110,6 @@ namespace WinForm.Inventory.ReceivItem
                 dataGridViewRow.Cells[6].Value = "0";
                 dataGridViewRow.Cells[7].Value = frmProduct.SelectProduct.Price;
 
-                var cost = frmProduct.SelectProduct.Cost;
                 dataGridViewRow.Cells[8].Value = frmProduct.SelectProduct.Cost;
                 dataGridViewRow.Cells[9].Value = "";
                 dataGridViewRow.Cells[10].Value = "";
@@ -128,7 +119,7 @@ namespace WinForm.Inventory.ReceivItem
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error :" + exception, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"Error :" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -147,6 +138,13 @@ namespace WinForm.Inventory.ReceivItem
 
                         dataGridView1.Rows[rowIndex].Cells[9].Value = amount;
                     }
+
+                    float sum = 0;
+                    for (var i = 0; i < dataGridView1.Rows.Count; ++i)
+                    {
+                        sum += Convert.ToSingle(dataGridView1.Rows[i].Cells[9].Value);
+                    }
+                    txtTotalAmount.Text = sum.ToString(CultureInfo.InvariantCulture);
                     break;
             }
         }
@@ -157,6 +155,32 @@ namespace WinForm.Inventory.ReceivItem
             {
                 for (var row = 0; row < dataGridView1.RowCount - 1; row++)
                 {
+                    // Insert into Transaction
+                    var transaction = new Transaction
+                    {
+                        TransactionId = txtReceiveId.Text,
+                        SupplierId = Convert.ToInt32(txtSupplierId.Text),
+                        TransactionType = TransactionType.Receive,
+                        SynNote = txtSynNote.Text,
+                        Note = txtNote.Text,
+                        DateTime = Convert.ToDateTime(Convert.ToDateTime(txtDate.Text).ToShortDateString()),
+                        UserId = Convert.ToInt32(txtUserId.Text),
+                        TotalAmount = Convert.ToSingle(txtTotalAmount.Text)
+                    };
+                    _appContext.Transactions.Add(transaction); // Add Transaction to Context
+                    // Transaction Item
+                    var transactionItem = new TransactionItem
+                    {
+                        TransactionId = txtReceiveId.Text,
+                        ProductId = int.Parse(dataGridView1.Rows[0].Cells[0].Value.ToString()),
+                        Price = float.Parse(dataGridView1.Rows[row].Cells[7].Value.ToString()),
+                        Cost = float.Parse(dataGridView1.Rows[row].Cells[8].Value.ToString()),
+//                        Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
+                        WarehouseId = Convert.ToInt32(txtWarehouseId.Text)
+                    };
+                    _appContext.TransactionItems.Add(transactionItem);
+
+                    // Save into Productwarehouse
                     var wareId = int.Parse(txtWarehouseId.Text);
                     var proId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString());
                     var producWarehouse = _appContext.ProducWarehouses.Find(proId, wareId);
@@ -167,7 +191,7 @@ namespace WinForm.Inventory.ReceivItem
                         producWarehouse.WarehouseId = int.Parse(txtWarehouseId.Text);
                         producWarehouse.ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString());
                         producWarehouse.OnHand = onhand;
-                        producWarehouse.Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString());
+//                        producWarehouse.Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString());
                         producWarehouse.AlertQty = int.Parse(dataGridView1.Rows[row].Cells[6].Value.ToString());
                         producWarehouse.SupplierId = int.Parse(txtSupplierId.Text);
                         producWarehouse.Note = dataGridView1.Rows[row].Cells[10].Value.ToString();
@@ -181,7 +205,7 @@ namespace WinForm.Inventory.ReceivItem
                             WarehouseId = int.Parse(txtWarehouseId.Text),
                             ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString()),
                             OnHand = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
-                            Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
+//                            Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
                             AlertQty = int.Parse(dataGridView1.Rows[row].Cells[6].Value.ToString()),
                             SupplierId = int.Parse(txtSupplierId.Text),
                             Note = dataGridView1.Rows[row].Cells[10].Value.ToString(),
@@ -189,7 +213,7 @@ namespace WinForm.Inventory.ReceivItem
                         };
                         _appContext.ProducWarehouses.Add(_producWarehouse);
                     }
-                }
+                } // end foreach
                 if (_appContext == null) MyMessage.Warning("No Data");
                 if (_appContext != null && _appContext.SaveChanges() != 0)
                     MyMessage.Success("Successfully");

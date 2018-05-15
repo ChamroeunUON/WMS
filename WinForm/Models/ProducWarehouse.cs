@@ -20,8 +20,7 @@ namespace WinForm.Models
         public Warehouse Warehouse { get; set; }
 
         public int?  SupplierId { get; set; }
-        
-        public int Qty { get; set; }
+//        public int Qty { get; set; }
         public int OnHand { get; set; }
         public int AlertQty { get; set; }
         public string Note { get; set; }

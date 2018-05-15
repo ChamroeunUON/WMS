@@ -88,13 +88,13 @@ namespace WinForm.Administrator.Employee
             {
                 if (string.IsNullOrWhiteSpace(txtNameEN.Text))
                 {
-                    MessageBox.Show("Name EN is Required ", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Name EN is Required ", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 if (string.IsNullOrWhiteSpace(txtNameKH.Text))
                 {
-                    MessageBox.Show("Name KH is Required ", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Name KH is Required ", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (_employee == null)
@@ -122,7 +122,7 @@ namespace WinForm.Administrator.Employee
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Message:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -138,7 +138,7 @@ namespace WinForm.Administrator.Employee
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Message:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -166,7 +166,7 @@ namespace WinForm.Administrator.Employee
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Message:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -174,7 +174,7 @@ namespace WinForm.Administrator.Employee
         {
             try
             {
-                var dialog = MessageBox.Show("Are you sure want to delete this employee?", "Confirm",
+                var dialog = MessageBox.Show("Are you sure want to delete this employee?", @"Message",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialog != DialogResult.Yes) return;
                 var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
@@ -185,7 +185,7 @@ namespace WinForm.Administrator.Employee
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message:" + exception, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Message:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

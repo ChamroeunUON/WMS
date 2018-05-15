@@ -106,7 +106,7 @@ namespace WinForm.Administrator.Warehouse
         {
             try
             {
-                var dialog = MessageBox.Show("Are you sure want to delete this warehouse?", "Message",
+                var dialog = MessageBox.Show("Are you sure want to delete this warehouse?", @"Message",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dialog != DialogResult.Yes) return;

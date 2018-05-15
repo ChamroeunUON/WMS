@@ -33,7 +33,7 @@ namespace WinForm.Inventory.ProductMaster
             {
                 using (var _appContext = new AppContext())
                 {
-                    var products = _appContext.Products.ToList();
+                    var products = _appContext.Products.Where(s=>s.Status ==1).ToList();
                     foreach (var product in products)
                     {
                         dataGridView1.Rows.Add(product.Id, product.NameEn, product.NameKh, product.CategoryId,

@@ -50,7 +50,7 @@ namespace WinForm.Administrator.FormSupplier
             {
                 if (string.IsNullOrWhiteSpace(txtName.Text))
                 {
-                    MessageBox.Show("Name is required!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Name is required!", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (string.IsNullOrWhiteSpace(txtEmail.Text))
@@ -79,11 +79,11 @@ namespace WinForm.Administrator.FormSupplier
                 }
                 _appContext.SaveChanges();
                 _supplier = null;
-                MessageBox.Show("Succesfuyly", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Succesfuyly", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error meaasge:" + exception, "Error Meassge", MessageBoxButtons.OK,
+                MessageBox.Show("Error meaasge:" + exception, @"Message", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
         }
@@ -117,7 +117,7 @@ namespace WinForm.Administrator.FormSupplier
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error Message: " + exception, "Error Message", MessageBoxButtons.OK,
+                MessageBox.Show("Error Message: " + exception, @"Message", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
         }
@@ -127,7 +127,7 @@ namespace WinForm.Administrator.FormSupplier
             try
             {
                 var dialogResult = MessageBox.Show("Are you sure want to delete this Supplier?",
-                    "Confirm Information", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    @"Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     var id = Convert.ToInt16(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
@@ -142,7 +142,7 @@ namespace WinForm.Administrator.FormSupplier
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Erroe Meassge:" + exception, "Error Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erroe Meassge:" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

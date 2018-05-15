@@ -49,7 +49,7 @@ namespace WinForm.Administrator.frmProduct
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error :" + exception, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error :" + exception, @"Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -178,6 +178,8 @@ namespace WinForm.Inventory.ReceivItem
                     {
                         TransactionId = txtReceiveId.Text,
                         ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString()),
+                        Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
+
                         Price = float.Parse(dataGridView1.Rows[row].Cells[7].Value.ToString()),
                         Cost = float.Parse(dataGridView1.Rows[row].Cells[8].Value.ToString()),
                         WarehouseId = Convert.ToInt32(txtWarehouseId.Text)
@@ -229,7 +231,14 @@ namespace WinForm.Inventory.ReceivItem
                 {
                     var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
                     var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
-
+                    var user = _appContext.Users.Where(id => id.Id == CurrentUser.GetCurrentUserId).ToList();
+                    var dtUser = new DataTable();
+                    
+                    using (var reader = ObjectReader.Create(user))
+                    {
+                        dtUser.Load(reader);
+                    }
+                    dtUser.TableName="User";
                     DataTable dt1 = new DataTable();
                     using (var reader = ObjectReader.Create(t))
                     {
@@ -247,6 +256,7 @@ namespace WinForm.Inventory.ReceivItem
 
                     dsReceiveItem ds = new dsReceiveItem();
 
+                    ds.Merge(dtUser);
                     ds.Merge(dt1);
                     ds.Merge(dt2);
 

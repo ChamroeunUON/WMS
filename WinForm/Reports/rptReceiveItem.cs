@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WinForm.CrystallReport {
+namespace WinForm.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace WinForm.CrystallReport {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class receiveList : ReportClass {
+    public class rptReceiveItem : ReportClass {
         
-        public receiveList() {
+        public rptReceiveItem() {
         }
         
         public override string ResourceName {
             get {
-                return "receiveList.rpt";
+                return "rptReceiveItem.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace WinForm.CrystallReport {
         
         public override string FullResourceName {
             get {
-                return "WinForm.CrystallReport.receiveList.rpt";
+                return "WinForm.Reports.rptReceiveItem.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace WinForm.CrystallReport {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedreceiveList : Component, ICachedReport {
+    public class CachedrptReceiveItem : Component, ICachedReport {
         
-        public CachedreceiveList() {
+        public CachedrptReceiveItem() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace WinForm.CrystallReport {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            receiveList rpt = new receiveList();
+            rptReceiveItem rpt = new rptReceiveItem();
             rpt.Site = this.Site;
             return rpt;
         }

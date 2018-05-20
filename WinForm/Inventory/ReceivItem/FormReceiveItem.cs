@@ -9,6 +9,9 @@ using WinForm.Administrator.frmProduct;
 using WinForm.Inventory.ProductMaster;
 using WinForm.Models;
 using WinForm.Models.Support;
+using WinForm.Reports;
+using System.Data;
+using System.ComponentModel;
 
 namespace WinForm.Inventory.ReceivItem
 {
@@ -153,21 +156,22 @@ namespace WinForm.Inventory.ReceivItem
         {
             try
             {
+
+                // Insert into Transaction
+                var transaction = new Transaction
+                {
+                    TransactionId = txtReceiveId.Text,
+                    SupplierId = Convert.ToInt32(txtSupplierId.Text),
+                    TransactionType = TransactionType.Receive,
+                    SynNote = txtSynNote.Text,
+                    Note = txtNote.Text,
+                    DateTime = Convert.ToDateTime(Convert.ToDateTime(txtDate.Text).ToShortDateString()),
+                    UserId = Convert.ToInt32(txtUserId.Text),
+                    TotalAmount = Convert.ToSingle(txtTotalAmount.Text)
+                };
+                _appContext.Transactions.Add(transaction); // Add Transaction to Context
                 for (var row = 0; row < dataGridView1.RowCount - 1; row++)
                 {
-                    // Insert into Transaction
-                    var transaction = new Transaction
-                    {
-                        TransactionId = txtReceiveId.Text,
-                        SupplierId = Convert.ToInt32(txtSupplierId.Text),
-                        TransactionType = TransactionType.Receive,
-                        SynNote = txtSynNote.Text,
-                        Note = txtNote.Text,
-                        DateTime = Convert.ToDateTime(Convert.ToDateTime(txtDate.Text).ToShortDateString()),
-                        UserId = Convert.ToInt32(txtUserId.Text),
-                        TotalAmount = Convert.ToSingle(txtTotalAmount.Text)
-                    };
-                    _appContext.Transactions.Add(transaction); // Add Transaction to Context
                     // Transaction Item
                     var transactionItem = new TransactionItem
                     {
@@ -214,9 +218,37 @@ namespace WinForm.Inventory.ReceivItem
                         _appContext.ProducWarehouses.Add(_producWarehouse);
                     }
                 } // end foreach
+
+
                 if (_appContext == null) MyMessage.Warning("No Data");
-                if (_appContext != null && _appContext.SaveChanges() != 0)
-                    MyMessage.Success("Successfully");
+                _appContext.SaveChanges();
+                //                if (_appContext != null && _appContext.SaveChanges() != 0)
+                //                {
+                //                    var dialogResult = MessageBox.Show("Succesfully! Now Do you want print report?", "Information",
+                //                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                //                    if (dialogResult == DialogResult.Yes)
+                //                    {
+                //                        var frm = new FormReceiveListReport();
+                //                        frm.Show();
+                //                    }
+                //                }
+
+                DataSetTransactionItem ds = new DataSetTransactionItem();
+               
+                BindingSource bs = new BindingSource();
+                // bs.DataSource = _appContext.TransactionItems.Include(t => t.Transaction).Include(p => p.Product).Where(i => i.TransactionId == txtReceiveId.Text).ToList();
+
+                var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
+                var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
+
+                rptReceiveItem rpt = new rptReceiveItem();
+                rpt.SetDataSource(t);
+                var frm = new FormReceiveListReport(rpt);
+                frm.Show();
+
+
+
+      
                 dataGridView1.Rows.Clear();
             }
             catch (Exception exception)
@@ -224,5 +256,25 @@ namespace WinForm.Inventory.ReceivItem
                 MyMessage.Error(exception.ToString());
             }
         }
+
+        public DataTable ConvertToDataTable<T>(IList<T> data)
+        {
+            PropertyDescriptorCollection properties =
+               TypeDescriptor.GetProperties(typeof(T));
+            DataTable table = new DataTable();
+            foreach (PropertyDescriptor prop in properties)
+                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+            foreach (T item in data)
+            {
+                DataRow row = table.NewRow();
+                foreach (PropertyDescriptor prop in properties)
+                    row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                table.Rows.Add(row);
+            }
+            return table;
+
+        }
+
     }
+
 }

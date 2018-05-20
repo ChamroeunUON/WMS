@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using WinForm.Models.Support;
 
 namespace WinForm.Models
 {
     internal class Transaction
     {
-        public int Id { get; set; } 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string TransactionId { get; set; }
 
         public TransactionType TransactionType { get; set; }

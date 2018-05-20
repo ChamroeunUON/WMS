@@ -10,7 +10,10 @@ namespace WinForm.Models
 {
     internal class TransactionItem
     {
+        //        public int Id { get; set; }
         public int Id { get; set; }
+        [ForeignKey("Transaction")]
+        public string TransactionId { get; set; }
         public Transaction Transaction { get; set; }
 
         public int ProductId { get; set; }
@@ -18,7 +21,7 @@ namespace WinForm.Models
         public int WarehouseId { get; set; }
         public Warehouse Warehouse { get; set; }
 
-        public string TransactionId { get; set; }
+        
         public int Qty { get; set; }
         public float Price { get; set; }
         public float Cost { get; set; }

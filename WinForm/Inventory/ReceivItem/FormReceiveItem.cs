@@ -9,9 +9,10 @@ using WinForm.Administrator.frmProduct;
 using WinForm.Inventory.ProductMaster;
 using WinForm.Models;
 using WinForm.Models.Support;
-using WinForm.Reports;
 using System.Data;
 using System.ComponentModel;
+using FastMember;
+using WinForm.Reports;
 
 namespace WinForm.Inventory.ReceivItem
 {
@@ -176,10 +177,9 @@ namespace WinForm.Inventory.ReceivItem
                     var transactionItem = new TransactionItem
                     {
                         TransactionId = txtReceiveId.Text,
-                        ProductId = int.Parse(dataGridView1.Rows[0].Cells[0].Value.ToString()),
+                        ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString()),
                         Price = float.Parse(dataGridView1.Rows[row].Cells[7].Value.ToString()),
                         Cost = float.Parse(dataGridView1.Rows[row].Cells[8].Value.ToString()),
-//                        Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
                         WarehouseId = Convert.ToInt32(txtWarehouseId.Text)
                     };
                     _appContext.TransactionItems.Add(transactionItem);
@@ -222,33 +222,45 @@ namespace WinForm.Inventory.ReceivItem
 
                 if (_appContext == null) MyMessage.Warning("No Data");
                 _appContext.SaveChanges();
-                //                if (_appContext != null && _appContext.SaveChanges() != 0)
-                //                {
-                //                    var dialogResult = MessageBox.Show("Succesfully! Now Do you want print report?", "Information",
-                //                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                //                    if (dialogResult == DialogResult.Yes)
-                //                    {
-                //                        var frm = new FormReceiveListReport();
-                //                        frm.Show();
-                //                    }
-                //                }
 
-                DataSetTransactionItem ds = new DataSetTransactionItem();
-               
-                BindingSource bs = new BindingSource();
-                // bs.DataSource = _appContext.TransactionItems.Include(t => t.Transaction).Include(p => p.Product).Where(i => i.TransactionId == txtReceiveId.Text).ToList();
+                var dialog = MessageBox.Show("Do you want print report?", "MessageBox", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information);
+                if (dialog == DialogResult.Yes)
+                {
+                    var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
+                    var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
 
-                var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
-                var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
+                    DataTable dt1 = new DataTable();
+                    using (var reader = ObjectReader.Create(t))
+                    {
+                        dt1.Load(reader);
+                    }
+                    dt1.TableName = "transaction";
 
-                rptReceiveItem rpt = new rptReceiveItem();
-                rpt.SetDataSource(t);
-                var frm = new FormReceiveListReport(rpt);
-                frm.Show();
+                    DataTable dt2 = new DataTable();
+                    using (var reader = ObjectReader.Create(ti))
+                    {
+                        dt2.Load(reader);
+                    }
+                    dt2.TableName = "TransactionItem";
 
 
+                    dsReceiveItem ds = new dsReceiveItem();
 
-      
+                    ds.Merge(dt1);
+                    ds.Merge(dt2);
+
+                    var rpt = new crptReceiveItem();
+                    rpt.SetDataSource(ds);
+                    var frm = new frmReceiveReport(rpt);
+                    frm.Show();
+                }
+                else if(dialog == DialogResult.No)
+                {
+                    MyMessage.Success("Information saved successfully.");
+                }
+
+
                 dataGridView1.Rows.Clear();
             }
             catch (Exception exception)

@@ -72,6 +72,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="System" />
@@ -190,12 +194,6 @@
     </Compile>
     <Compile Include="Inventory\ReceivItem\FormReceiveItem.Designer.cs">
       <DependentUpon>FormReceiveItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inventory\ReceivItem\FormReceiveListReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory\ReceivItem\FormReceiveListReport.Designer.cs">
-      <DependentUpon>FormReceiveListReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201805070417317_InitialModel.cs" />
     <Compile Include="Migrations\201805070417317_InitialModel.Designer.cs">
@@ -401,19 +399,25 @@
     <Compile Include="MyMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\DataSetTransactionItem.cs">
-      <DependentUpon>DataSetTransactionItem.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\DataSetTransactionItem.Designer.cs">
+    <Compile Include="Reports\crptReceiveItem.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetTransactionItem.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\rptReceiveItem.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptReceiveItem.rpt</DependentUpon>
+      <DependentUpon>crptReceiveItem.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\dsReceiveItem.cs">
+      <DependentUpon>dsReceiveItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\dsReceiveItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReceiveItem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReceiveReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReceiveReport.Designer.cs">
+      <DependentUpon>frmReceiveReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Setting\FrmMeasure\frmMeasure.cs">
       <SubType>Form</SubType>
@@ -477,9 +481,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\ReceivItem\FormReceiveItem.resx">
       <DependentUpon>FormReceiveItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\ReceivItem\FormReceiveListReport.resx">
-      <DependentUpon>FormReceiveListReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805070417317_InitialModel.resx">
       <DependentUpon>201805070417317_InitialModel.cs</DependentUpon>
@@ -629,9 +630,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\rptReceiveItem.rpt">
+    <EmbeddedResource Include="Reports\crptReceiveItem.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptReceiveItem.cs</LastGenOutput>
+      <LastGenOutput>crptReceiveItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReceiveReport.resx">
+      <DependentUpon>frmReceiveReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Setting\FrmMeasure\frmMeasure.resx">
       <DependentUpon>frmMeasure.cs</DependentUpon>
@@ -656,16 +660,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Reports\DataSetTransactionItem.xsc">
-      <DependentUpon>DataSetTransactionItem.xsd</DependentUpon>
+    <None Include="Reports\dsReceiveItem.xsc">
+      <DependentUpon>dsReceiveItem.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetTransactionItem.xsd">
+    <None Include="Reports\dsReceiveItem.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetTransactionItem.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsReceiveItem.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reports\DataSetTransactionItem.xss">
-      <DependentUpon>DataSetTransactionItem.xsd</DependentUpon>
+    <None Include="Reports\dsReceiveItem.xss">
+      <DependentUpon>dsReceiveItem.xsd</DependentUpon>
     </None>
     <None Include="Resources\Logo32x32.png" />
   </ItemGroup>

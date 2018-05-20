@@ -16,14 +16,14 @@ namespace WinForm.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptReceiveItem : ReportClass {
+    public class crptReceiveItem : ReportClass {
         
-        public rptReceiveItem() {
+        public crptReceiveItem() {
         }
         
         public override string ResourceName {
             get {
-                return "rptReceiveItem.rpt";
+                return "crptReceiveItem.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace WinForm.Reports {
         
         public override string FullResourceName {
             get {
-                return "WinForm.Reports.rptReceiveItem.rpt";
+                return "WinForm.Reports.crptReceiveItem.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace WinForm.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptReceiveItem : Component, ICachedReport {
+    public class CachedcrptReceiveItem : Component, ICachedReport {
         
-        public CachedrptReceiveItem() {
+        public CachedcrptReceiveItem() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace WinForm.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptReceiveItem rpt = new rptReceiveItem();
+            crptReceiveItem rpt = new crptReceiveItem();
             rpt.Site = this.Site;
             return rpt;
         }

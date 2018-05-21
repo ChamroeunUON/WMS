@@ -383,6 +383,10 @@
     <Compile Include="Migrations\201805211139565_AddSaleOrderAndSaleOrderItem.Designer.cs">
       <DependentUpon>201805211139565_AddSaleOrderAndSaleOrderItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805211220226_AddMoreProperTiesOnSetting.cs" />
+    <Compile Include="Migrations\201805211220226_AddMoreProperTiesOnSetting.Designer.cs">
+      <DependentUpon>201805211220226_AddMoreProperTiesOnSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -404,6 +408,18 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Warehouse.cs" />
     <Compile Include="MyMessage.cs" />
+    <Compile Include="POS\FormListCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS\FormListCustomer.Designer.cs">
+      <DependentUpon>FormListCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS\FormListProductWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS\FormListProductWarehouse.Designer.cs">
+      <DependentUpon>FormListProductWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="POS\FormSaleOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -438,11 +454,11 @@
     <Compile Include="Setting\FrmMeasure\frmMeasure.Designer.cs">
       <DependentUpon>frmMeasure.cs</DependentUpon>
     </Compile>
-    <Compile Include="Setting\POSSetting\TxtInvoi.cs">
+    <Compile Include="Setting\POSSetting\FormSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Setting\POSSetting\TxtInvoi.Designer.cs">
-      <DependentUpon>TxtInvoi.cs</DependentUpon>
+    <Compile Include="Setting\POSSetting\FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administrator\Employee\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
@@ -636,6 +652,15 @@
     <EmbeddedResource Include="Migrations\201805211139565_AddSaleOrderAndSaleOrderItem.resx">
       <DependentUpon>201805211139565_AddSaleOrderAndSaleOrderItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805211220226_AddMoreProperTiesOnSetting.resx">
+      <DependentUpon>201805211220226_AddMoreProperTiesOnSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\FormListCustomer.resx">
+      <DependentUpon>FormListCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\FormListProductWarehouse.resx">
+      <DependentUpon>FormListProductWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="POS\FormSaleOrder.resx">
       <DependentUpon>FormSaleOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -659,8 +684,8 @@
     <EmbeddedResource Include="Setting\FrmMeasure\frmMeasure.resx">
       <DependentUpon>frmMeasure.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Setting\POSSetting\TxtInvoi.resx">
-      <DependentUpon>TxtInvoi.cs</DependentUpon>
+    <EmbeddedResource Include="Setting\POSSetting\FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

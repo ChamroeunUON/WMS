@@ -29,6 +29,8 @@ namespace WinForm.Inventory.ReceivItem
             InitializeComponent();
         }
 
+        
+
         private void FormReceiveItem_Load(object sender, EventArgs e)
         {
             txtUserId.Text = CurrentUser.GetCurrentUserId.ToString();

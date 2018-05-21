@@ -16,6 +16,7 @@ using WinForm.Administrator.FormSupplier;
 using WinForm.Administrator.Warehouse;
 using WinForm.Inventory.ReceivItem;
 using WinForm.Models.Support;
+using WinForm.POS;
 using WinForm.Setting.FrmMeasure;
 using WinForm.Setting.POSSetting;
 
@@ -149,7 +150,7 @@ namespace WinForm
 
         private void btnPosSetting_Click(object sender, EventArgs e)
         {
-            var frm = new FormPOSSetting {MdiParent = this};
+            var frm = new te {MdiParent = this};
             frm.Show();
 
         }
@@ -157,6 +158,12 @@ namespace WinForm
         private void buttonItem21_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSaleOrder_Click(object sender, EventArgs e)
+        {
+            var frm = new FormSaleOrder { MdiParent = this};
+            frm.Show();
         }
     }
 }

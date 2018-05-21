@@ -27,6 +27,8 @@ namespace WinForm.Inventory.ProductMaster
             set { Product = value; }
         }
 
+       
+        
         private void FormListProduct_Load(object sender, EventArgs e)
         {
             try

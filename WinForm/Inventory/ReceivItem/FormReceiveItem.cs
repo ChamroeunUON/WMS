@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using FastMember;
 using WinForm.Administrator.frmProduct;
 using WinForm.Inventory.ProductMaster;
 using WinForm.Models;
 using WinForm.Models.Support;
-using System.Data;
-using System.ComponentModel;
-using FastMember;
 using WinForm.Reports;
 
 namespace WinForm.Inventory.ReceivItem
@@ -22,7 +22,6 @@ namespace WinForm.Inventory.ReceivItem
         private List<Models.Support.Setting> _setting;
         private int _idMax;
         private ProducWarehouse _producWarehouse;
-        private List<TransactionItem> _transactionItems;
 
         public FormReceiveItem()
         {
@@ -39,7 +38,7 @@ namespace WinForm.Inventory.ReceivItem
             _setting = _appContext.Settings.ToList();
             foreach (var setting in _setting)
                 txtReceiveId.Text = setting.ReceivePre + DateTime.Today.Year + DateTime.Today.Month.ToString("D2") +
-                                  DateTime.Today.Day.ToString("D2") + _idMax.ToString("D3");
+                                    DateTime.Today.Day.ToString("D2") + _idMax.ToString("D3");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -145,9 +144,7 @@ namespace WinForm.Inventory.ReceivItem
 
                     float sum = 0;
                     for (var i = 0; i < dataGridView1.Rows.Count; ++i)
-                    {
                         sum += Convert.ToSingle(dataGridView1.Rows[i].Cells[9].Value);
-                    }
                     txtTotalAmount.Text = sum.ToString(CultureInfo.InvariantCulture);
                     break;
             }
@@ -157,7 +154,6 @@ namespace WinForm.Inventory.ReceivItem
         {
             try
             {
-
                 // Insert into Transaction
                 var transaction = new Transaction
                 {
@@ -197,7 +193,6 @@ namespace WinForm.Inventory.ReceivItem
                         producWarehouse.WarehouseId = int.Parse(txtWarehouseId.Text);
                         producWarehouse.ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString());
                         producWarehouse.OnHand = onhand;
-//                        producWarehouse.Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString());
                         producWarehouse.AlertQty = int.Parse(dataGridView1.Rows[row].Cells[6].Value.ToString());
                         producWarehouse.SupplierId = int.Parse(txtSupplierId.Text);
                         producWarehouse.Note = dataGridView1.Rows[row].Cells[10].Value.ToString();
@@ -211,7 +206,6 @@ namespace WinForm.Inventory.ReceivItem
                             WarehouseId = int.Parse(txtWarehouseId.Text),
                             ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString()),
                             OnHand = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
-//                            Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
                             AlertQty = int.Parse(dataGridView1.Rows[row].Cells[6].Value.ToString()),
                             SupplierId = int.Parse(txtSupplierId.Text),
                             Note = dataGridView1.Rows[row].Cells[10].Value.ToString(),
@@ -225,28 +219,34 @@ namespace WinForm.Inventory.ReceivItem
                 if (_appContext == null) MyMessage.Warning("No Data");
                 _appContext.SaveChanges();
 
-                var dialog = MessageBox.Show("Do you want print report?", "MessageBox", MessageBoxButtons.YesNo,
+                var dialog = MessageBox.Show(@"Do you want to print report?", @"MessageBox", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Information);
-                if (dialog == DialogResult.Yes)
+                if (dialog != DialogResult.Yes)
+                {
+                    if (dialog == DialogResult.No)
+                        MyMessage.Success("Information saved successfully.");
+                }
+                else
                 {
                     var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
-                    var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
+                    var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text))
+                        .ToList();
                     var user = _appContext.Users.Where(id => id.Id == CurrentUser.GetCurrentUserId).ToList();
                     var dtUser = new DataTable();
-                    
+
                     using (var reader = ObjectReader.Create(user))
                     {
                         dtUser.Load(reader);
                     }
-                    dtUser.TableName="User";
-                    DataTable dt1 = new DataTable();
+                    dtUser.TableName = "User";
+                    var dt1 = new DataTable();
                     using (var reader = ObjectReader.Create(t))
                     {
                         dt1.Load(reader);
                     }
                     dt1.TableName = "transaction";
 
-                    DataTable dt2 = new DataTable();
+                    var dt2 = new DataTable();
                     using (var reader = ObjectReader.Create(ti))
                     {
                         dt2.Load(reader);
@@ -254,7 +254,7 @@ namespace WinForm.Inventory.ReceivItem
                     dt2.TableName = "TransactionItem";
 
 
-                    dsReceiveItem ds = new dsReceiveItem();
+                    var ds = new dsReceiveItem();
 
                     ds.Merge(dtUser);
                     ds.Merge(dt1);
@@ -264,10 +264,6 @@ namespace WinForm.Inventory.ReceivItem
                     rpt.SetDataSource(ds);
                     var frm = new frmReceiveReport(rpt);
                     frm.Show();
-                }
-                else if(dialog == DialogResult.No)
-                {
-                    MyMessage.Success("Information saved successfully.");
                 }
 
 
@@ -281,22 +277,19 @@ namespace WinForm.Inventory.ReceivItem
 
         public DataTable ConvertToDataTable<T>(IList<T> data)
         {
-            PropertyDescriptorCollection properties =
-               TypeDescriptor.GetProperties(typeof(T));
-            DataTable table = new DataTable();
+            var properties =
+                TypeDescriptor.GetProperties(typeof(T));
+            var table = new DataTable();
             foreach (PropertyDescriptor prop in properties)
                 table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
-            foreach (T item in data)
+            foreach (var item in data)
             {
-                DataRow row = table.NewRow();
+                var row = table.NewRow();
                 foreach (PropertyDescriptor prop in properties)
                     row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
                 table.Rows.Add(row);
             }
             return table;
-
         }
-
     }
-
 }

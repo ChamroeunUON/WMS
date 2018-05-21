@@ -8,22 +8,23 @@ using System.Threading.Tasks;
 
 namespace WinForm.Models
 {
-    public class TransactionItem
+    public class SaleOrderItem
     {
-        //        public int Id { get; set; }
+        [Key]
         public int Id { get; set; }
-        [ForeignKey("Transaction")]
-        public string TransactionId { get; set; }
-        public Transaction Transaction { get; set; }
+        [ForeignKey("SaleOrder")]
+        public string SaleOrderId { get; set; }
+        public SaleOrder SaleOrder { get; set; }
 
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public IEnumerable<Product> Products { get; set; }
         public int WarehouseId { get; set; }
         public Warehouse Warehouse { get; set; }
-
-        
         public int Qty { get; set; }
         public float Price { get; set; }
-        public float Cost { get; set; }
+        public float DisPercent { get; set; }
+        public float VatPercent { get; set; }
+        public float Amount { get; set; }
+        public string Note { get; set; }
+
     }
 }

@@ -379,6 +379,10 @@
     <Compile Include="Migrations\201805200028143_useStrinAsPrimaryKeyTransaction.Designer.cs">
       <DependentUpon>201805200028143_useStrinAsPrimaryKeyTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805211139565_AddSaleOrderAndSaleOrderItem.cs" />
+    <Compile Include="Migrations\201805211139565_AddSaleOrderAndSaleOrderItem.Designer.cs">
+      <DependentUpon>201805211139565_AddSaleOrderAndSaleOrderItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -387,6 +391,9 @@
     <Compile Include="Models\Measure.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProducWarehouse.cs" />
+    <Compile Include="Models\SaleOrder.cs" />
+    <Compile Include="Models\SaleOrderItem.cs" />
+    <Compile Include="Models\Support\SaleType.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Support\CurrentUser.cs" />
     <Compile Include="Models\Support\Encryption.cs" />
@@ -397,6 +404,12 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Warehouse.cs" />
     <Compile Include="MyMessage.cs" />
+    <Compile Include="POS\FormSaleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS\FormSaleOrder.Designer.cs">
+      <DependentUpon>FormSaleOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\crptReceiveItem.cs">
@@ -620,6 +633,12 @@
     <EmbeddedResource Include="Migrations\201805200028143_useStrinAsPrimaryKeyTransaction.resx">
       <DependentUpon>201805200028143_useStrinAsPrimaryKeyTransaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805211139565_AddSaleOrderAndSaleOrderItem.resx">
+      <DependentUpon>201805211139565_AddSaleOrderAndSaleOrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\FormSaleOrder.resx">
+      <DependentUpon>FormSaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -814,9 +833,7 @@
   <ItemGroup>
     <None Include="Resources\012-money-4.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="POS\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>

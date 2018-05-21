@@ -682,7 +682,7 @@
             // 
             this.ribbonTabItem2.Name = "ribbonTabItem2";
             this.ribbonTabItem2.Panel = this.ribbonPanel2;
-            this.ribbonTabItem2.Text = "Point of Sale";
+            this.ribbonTabItem2.Text = "Point of SaleOrder";
             // 
             // ribbonTabItem1
             // 

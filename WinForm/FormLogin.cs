@@ -8,8 +8,7 @@ namespace WinForm
 {
     public partial class FormLogin : Form
     {
-        private AppContext _appContext;
-        public string username { get; set; }
+        public string Username { get; set; }
 
         public FormLogin()
         {
@@ -37,19 +36,16 @@ namespace WinForm
                     {
                         if (txtUserName.Text != user.UserNmae) continue;
                         var pwd = Encryption.Decrypt(Encryption.GetHashKey(Encryption.HashKey), user.Password);
-                        if (pwd == txtpwd.Text)
-                        {
-                            CurrentUser.GetCurrentUser = txtUserName.Text;
-                            CurrentUser.GetCurrentUserId = user.Id;
-                            this.Hide();
-                        }
-                            
+                        if (pwd != txtpwd.Text) continue;
+                        CurrentUser.GetCurrentUser = txtUserName.Text;
+                        CurrentUser.GetCurrentUserId = user.Id;
+                        Hide();
                     }
                 }
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Error :" + exception);
+                MessageBox.Show(@"Error :" + exception);
             }
         }
     }

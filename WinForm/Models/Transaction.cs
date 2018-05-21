@@ -6,7 +6,7 @@ using WinForm.Models.Support;
 
 namespace WinForm.Models
 {
-    internal class Transaction
+    public class Transaction
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

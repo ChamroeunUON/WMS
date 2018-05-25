@@ -29,7 +29,6 @@ namespace WinForm.Inventory.ReceivItem
             InitializeComponent();
         }
 
-        
 
         private void FormReceiveItem_Load(object sender, EventArgs e)
         {
@@ -156,40 +155,24 @@ namespace WinForm.Inventory.ReceivItem
         {
             try
             {
-                // Insert into Transaction
-                var transaction = new Transaction
-                {
-                    TransactionId = txtReceiveId.Text,
-                    SupplierId = Convert.ToInt32(txtSupplierId.Text),
-                    TransactionType = TransactionType.Receive,
-                    SynNote = txtSynNote.Text,
-                    Note = txtNote.Text,
-                    DateTime = Convert.ToDateTime(Convert.ToDateTime(txtDate.Text).ToShortDateString()),
-                    UserId = Convert.ToInt32(txtUserId.Text),
-                    TotalAmount = Convert.ToSingle(txtTotalAmount.Text)
-                };
-                _appContext.Transactions.Add(transaction); // Add Transaction to Context
+                // Initial Transaction
+                var transaction = Transaction;
+                // Add Transaction to Context
+                _appContext.Transactions.Add(transaction); 
                 for (var row = 0; row < dataGridView1.RowCount - 1; row++)
                 {
                     // Transaction Item
-                    var transactionItem = new TransactionItem
-                    {
-                        TransactionId = txtReceiveId.Text,
-                        ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString()),
-                        Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
-
-                        Price = float.Parse(dataGridView1.Rows[row].Cells[7].Value.ToString()),
-                        Cost = float.Parse(dataGridView1.Rows[row].Cells[8].Value.ToString()),
-                        WarehouseId = Convert.ToInt32(txtWarehouseId.Text)
-                    };
+                    var transactionItem = TransactionItem(row);
                     _appContext.TransactionItems.Add(transactionItem);
 
-                    // Save into Productwarehouse
+                    /* Save into Productwarehouse */
                     var wareId = int.Parse(txtWarehouseId.Text);
                     var proId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString());
                     var producWarehouse = _appContext.ProducWarehouses.Find(proId, wareId);
+                        // Check Product Onhand Each ProductWarehouse
                     var onhand = int.Parse(dataGridView1.Rows[row].Cells[4].Value.ToString());
-                    if (producWarehouse != null)
+                        // Check Product have or not in ProductWarehouse if null Adding if not null will Modified 
+                    if (producWarehouse != null) 
                     {
                         onhand = onhand + int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString());
                         producWarehouse.WarehouseId = int.Parse(txtWarehouseId.Text);
@@ -215,8 +198,8 @@ namespace WinForm.Inventory.ReceivItem
                         };
                         _appContext.ProducWarehouses.Add(_producWarehouse);
                     }
-                } // end foreach
-
+                }
+                // end foreach
 
                 if (_appContext == null) MyMessage.Warning("No Data");
                 _appContext.SaveChanges();
@@ -230,38 +213,39 @@ namespace WinForm.Inventory.ReceivItem
                 }
                 else
                 {
-                    var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text))
+                    var t = _appContext.Transactions
+                        .Where(i => i.TransactionId.Equals(txtReceiveId.Text))
                         .Include(user => user.User)
                         .Include(supplier => supplier.Supplier)
-                        .Select(tran =>new
+                        .Select(tran => new
                         {
-                            TransactionId = tran.TransactionId,
-                            UserId = tran.UserId,
+                            tran.TransactionId,
+                            tran.UserId,
                             UserName = tran.User.UserNmae,
-                            TotalAmount =tran.TotalAmount,
-                            SupplierId = tran.SupplierId,
+                            tran.TotalAmount,
+                            tran.SupplierId,
                             SupplierName = tran.Supplier.Name
-
                         })
                         .ToList();
-                    var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text))
-                        .Include(pro=>pro.Product)
+                    var ti = _appContext.TransactionItems
+                        .Where(i => i.TransactionId.Equals(txtReceiveId.Text))
+                        .Include(pro => pro.Product)
                         .Include(cat => cat.Product.Category)
                         .Include(measure => measure.Product.Measure)
-                        .Select(item=>new
+                        .Select(item => new
                         {
-                            ProductId= item.ProductId,
-                            WarehouseId = item.WarehouseId,
-                            Qty = item.Qty,
-                            Cost = item.Cost,
+                            item.ProductId,
+                            item.WarehouseId,
+                            item.Qty,
+                            item.Cost,
                             Category = item.Product.Category.Name,
-                            Measure= item.Product.Measure.Name,
+                            Measure = item.Product.Measure.Name,
                             ProductName = item.Product.NameEn,
-                            NameKh = item.Product.NameKh
+                            item.Product.NameKh
                         })
                         .ToList();
-                    
-                    
+
+
                     var dt1 = new DataTable();
                     using (var reader = ObjectReader.Create(t))
                     {
@@ -294,6 +278,40 @@ namespace WinForm.Inventory.ReceivItem
             catch (Exception exception)
             {
                 MyMessage.Error(exception.ToString());
+            }
+        }
+
+        private TransactionItem TransactionItem(int row)
+        {
+            var transactionItem = new TransactionItem
+            {
+                TransactionId = txtReceiveId.Text,
+                ProductId = int.Parse(dataGridView1.Rows[row].Cells[0].Value.ToString()),
+                Qty = int.Parse(dataGridView1.Rows[row].Cells[5].Value.ToString()),
+
+                Price = float.Parse(dataGridView1.Rows[row].Cells[7].Value.ToString()),
+                Cost = float.Parse(dataGridView1.Rows[row].Cells[8].Value.ToString()),
+                WarehouseId = Convert.ToInt32(txtWarehouseId.Text)
+            };
+            return transactionItem;
+        }
+
+        private Transaction Transaction
+        {
+            get
+            {
+                var transaction = new Transaction
+                {
+                    TransactionId = txtReceiveId.Text,
+                    SupplierId = Convert.ToInt32(txtSupplierId.Text),
+                    TransactionType = TransactionType.Receive,
+                    SynNote = txtSynNote.Text,
+                    Note = txtNote.Text,
+                    DateTime = Convert.ToDateTime(Convert.ToDateTime(txtDate.Text).ToShortDateString()),
+                    UserId = Convert.ToInt32(txtUserId.Text),
+                    TotalAmount = Convert.ToSingle(txtTotalAmount.Text)
+                };
+                return transaction;
             }
         }
 

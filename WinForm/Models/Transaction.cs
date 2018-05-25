@@ -20,7 +20,7 @@ namespace WinForm.Models
         public User User { get; set; }
 
         public int SupplierId { get; set; }
-
+        public Supplier Supplier { get; set; }
         public IEnumerable<TransactionItem> TransactionItems { get; set; }
 
         public float TotalAmount { get; set; }

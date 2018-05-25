@@ -230,17 +230,38 @@ namespace WinForm.Inventory.ReceivItem
                 }
                 else
                 {
-                    var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text)).ToList();
-                    var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text))
-                        .ToList();
-                    var user = _appContext.Users.Where(id => id.Id == CurrentUser.GetCurrentUserId).ToList();
-                    var dtUser = new DataTable();
+                    var t = _appContext.Transactions.Where(i => i.TransactionId.Equals(txtReceiveId.Text))
+                        .Include(user => user.User)
+                        .Include(supplier => supplier.Supplier)
+                        .Select(tran =>new
+                        {
+                            TransactionId = tran.TransactionId,
+                            UserId = tran.UserId,
+                            UserName = tran.User.UserNmae,
+                            TotalAmount =tran.TotalAmount,
+                            SupplierId = tran.SupplierId,
+                            SupplierName = tran.Supplier.Name
 
-                    using (var reader = ObjectReader.Create(user))
-                    {
-                        dtUser.Load(reader);
-                    }
-                    dtUser.TableName = "User";
+                        })
+                        .ToList();
+                    var ti = _appContext.TransactionItems.Where(i => i.TransactionId.Equals(txtReceiveId.Text))
+                        .Include(pro=>pro.Product)
+                        .Include(cat => cat.Product.Category)
+                        .Include(measure => measure.Product.Measure)
+                        .Select(item=>new
+                        {
+                            ProductId= item.ProductId,
+                            WarehouseId = item.WarehouseId,
+                            Qty = item.Qty,
+                            Cost = item.Cost,
+                            Category = item.Product.Category.Name,
+                            Measure= item.Product.Measure.Name,
+                            ProductName = item.Product.NameEn,
+                            NameKh = item.Product.NameKh
+                        })
+                        .ToList();
+                    
+                    
                     var dt1 = new DataTable();
                     using (var reader = ObjectReader.Create(t))
                     {
@@ -258,7 +279,6 @@ namespace WinForm.Inventory.ReceivItem
 
                     var ds = new dsReceiveItem();
 
-                    ds.Merge(dtUser);
                     ds.Merge(dt1);
                     ds.Merge(dt2);
 

@@ -387,6 +387,10 @@
     <Compile Include="Migrations\201805211220226_AddMoreProperTiesOnSetting.Designer.cs">
       <DependentUpon>201805211220226_AddMoreProperTiesOnSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805251719390_AddSupplierInTransaction.cs" />
+    <Compile Include="Migrations\201805251719390_AddSupplierInTransaction.Designer.cs">
+      <DependentUpon>201805251719390_AddSupplierInTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -654,6 +658,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805211220226_AddMoreProperTiesOnSetting.resx">
       <DependentUpon>201805211220226_AddMoreProperTiesOnSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805251719390_AddSupplierInTransaction.resx">
+      <DependentUpon>201805251719390_AddSupplierInTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS\FormListCustomer.resx">
       <DependentUpon>FormListCustomer.cs</DependentUpon>

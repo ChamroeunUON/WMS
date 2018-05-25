@@ -277,6 +277,7 @@ C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.rem
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.useStrinAsPrimaryKeyTransaction.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddSaleOrderAndSaleOrderItem.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddMoreProperTiesOnSetting.resources
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddSupplierInTransaction.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.POS.FormListCustomer.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.POS.FormListProductWarehouse.resources
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.POS.FormSaleOrder.resources
@@ -287,5 +288,3 @@ C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Setting.POSSet
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.exe
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.pdb
-C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
-C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.AddSupplierInTransaction.resources

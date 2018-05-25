@@ -21,14 +21,16 @@ namespace WinForm.Inventory.ProductMaster
             InitializeComponent();
         }
 
-        public string WarehouseId
+        public int WarehouseId
         {
             get
             {
-                var id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
                 return id;
             }
+            set { throw new NotImplementedException(); }
         }
+
         public string WarehouseName 
         {
             get

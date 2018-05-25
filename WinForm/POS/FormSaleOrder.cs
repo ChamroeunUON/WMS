@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
@@ -39,8 +40,10 @@ namespace WinForm.POS
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var frm = new FormListProductWarehouse();
+            var frm = new FormListProductWarehouse {WarehouseId = int.Parse(txtWarehouseId.Text)};
             frm.ShowDialog();
+
+           
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
@@ -50,6 +53,14 @@ namespace WinForm.POS
             txtCustomerID.Text = frm.CustomerId.ToString();
             txtCustomerName.Text = frm.CustomerName;
             
+        }
+
+        private void btnWarehouse_Click(object sender, EventArgs e)
+        {
+            var frm = new FormListWarehouse();
+            frm.ShowDialog();
+            txtWarehouseId.Text = frm.WarehouseId.ToString();
+            txtWarehouseName.Text = frm.WarehouseName;
         }
     }
 }

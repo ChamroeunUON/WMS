@@ -288,3 +288,4 @@ C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Setting.POSSet
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.exe
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.pdb
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Reports.ReceiveItems.FormSaleOrderReport.resources

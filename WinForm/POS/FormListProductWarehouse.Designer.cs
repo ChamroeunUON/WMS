@@ -37,11 +37,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSelect = new System.Windows.Forms.Button();
-            this.txtWarehouseName = new System.Windows.Forms.TextBox();
-            this.txtWarehouseID = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnWarehouse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,58 +105,11 @@
             this.btnSelect.UseVisualStyleBackColor = true;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // txtWarehouseName
-            // 
-            this.txtWarehouseName.Location = new System.Drawing.Point(570, 14);
-            this.txtWarehouseName.Name = "txtWarehouseName";
-            this.txtWarehouseName.Size = new System.Drawing.Size(237, 20);
-            this.txtWarehouseName.TabIndex = 19;
-            // 
-            // txtWarehouseID
-            // 
-            this.txtWarehouseID.Location = new System.Drawing.Point(119, 14);
-            this.txtWarehouseID.Name = "txtWarehouseID";
-            this.txtWarehouseID.Size = new System.Drawing.Size(200, 20);
-            this.txtWarehouseID.TabIndex = 20;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(468, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Warehouse Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "WarehouseId";
-            // 
-            // btnWarehouse
-            // 
-            this.btnWarehouse.Location = new System.Drawing.Point(325, 12);
-            this.btnWarehouse.Name = "btnWarehouse";
-            this.btnWarehouse.Size = new System.Drawing.Size(34, 23);
-            this.btnWarehouse.TabIndex = 18;
-            this.btnWarehouse.Text = "...";
-            this.btnWarehouse.UseVisualStyleBackColor = true;
-            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
-            // 
             // FormListProductWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 370);
-            this.Controls.Add(this.txtWarehouseName);
-            this.Controls.Add(this.txtWarehouseID);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnWarehouse);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormListProductWarehouse";
@@ -169,7 +117,6 @@
             this.Load += new System.EventHandler(this.FormListProductWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -184,10 +131,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.TextBox txtWarehouseName;
-        protected internal System.Windows.Forms.TextBox txtWarehouseID;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnWarehouse;
     }
 }

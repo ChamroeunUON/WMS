@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSaleId = new System.Windows.Forms.TabControl();
             this.ts = new System.Windows.Forms.TabPage();
@@ -66,6 +66,11 @@
             this.btnCustomer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtWarehouseId = new System.Windows.Forms.TextBox();
+            this.txtWarehouseName = new System.Windows.Forms.TextBox();
+            this.btnWarehouse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.txtSaleId.SuspendLayout();
             this.ts.SuspendLayout();
@@ -93,21 +98,26 @@
             // 
             // ts
             // 
+            this.ts.Controls.Add(this.btnWarehouse);
             this.ts.Controls.Add(this.dataGridView1);
             this.ts.Controls.Add(this.button2);
             this.ts.Controls.Add(this.dateSaleOrder);
             this.ts.Controls.Add(this.textBox5);
             this.ts.Controls.Add(this.txtUserName);
+            this.ts.Controls.Add(this.txtWarehouseName);
             this.ts.Controls.Add(this.txtCustomerName);
             this.ts.Controls.Add(this.txtNote);
+            this.ts.Controls.Add(this.txtWarehouseId);
             this.ts.Controls.Add(this.txtUser);
             this.ts.Controls.Add(this.txtCustomerID);
             this.ts.Controls.Add(this.txtSaleOrderID);
             this.ts.Controls.Add(this.label9);
             this.ts.Controls.Add(this.label6);
+            this.ts.Controls.Add(this.label8);
             this.ts.Controls.Add(this.label10);
             this.ts.Controls.Add(this.label4);
             this.ts.Controls.Add(this.label5);
+            this.ts.Controls.Add(this.label7);
             this.ts.Controls.Add(this.label2);
             this.ts.Controls.Add(this.label3);
             this.ts.Controls.Add(this.btnCustomer);
@@ -122,14 +132,14 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -393,6 +403,48 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(66, 130);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Warehouse ID";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(517, 130);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Warehouse Name";
+            // 
+            // txtWarehouseId
+            // 
+            this.txtWarehouseId.Location = new System.Drawing.Point(168, 126);
+            this.txtWarehouseId.Name = "txtWarehouseId";
+            this.txtWarehouseId.Size = new System.Drawing.Size(200, 20);
+            this.txtWarehouseId.TabIndex = 15;
+            // 
+            // txtWarehouseName
+            // 
+            this.txtWarehouseName.Location = new System.Drawing.Point(619, 126);
+            this.txtWarehouseName.Name = "txtWarehouseName";
+            this.txtWarehouseName.Size = new System.Drawing.Size(237, 20);
+            this.txtWarehouseName.TabIndex = 13;
+            // 
+            // btnWarehouse
+            // 
+            this.btnWarehouse.Location = new System.Drawing.Point(374, 126);
+            this.btnWarehouse.Name = "btnWarehouse";
+            this.btnWarehouse.Size = new System.Drawing.Size(34, 23);
+            this.btnWarehouse.TabIndex = 20;
+            this.btnWarehouse.Text = "...";
+            this.btnWarehouse.UseVisualStyleBackColor = true;
+            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
+            // 
             // FormSaleOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,5 +503,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.TextBox txtWarehouseName;
+        private System.Windows.Forms.TextBox txtWarehouseId;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnWarehouse;
     }
 }

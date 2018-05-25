@@ -452,6 +452,23 @@
     <Compile Include="Reports\frmReceiveReport.Designer.cs">
       <DependentUpon>frmReceiveReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\SaleOrderItem\crptSaleOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptSaleOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SaleOrderItem\dsSaleOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSaleOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SaleOrderItem\FormSaleOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SaleOrderItem\FormSaleOrderReport.Designer.cs">
+      <DependentUpon>FormSaleOrderReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setting\FrmMeasure\frmMeasure.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -688,6 +705,13 @@
     <EmbeddedResource Include="Reports\frmReceiveReport.resx">
       <DependentUpon>frmReceiveReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SaleOrderItem\crptSaleOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptSaleOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SaleOrderItem\FormSaleOrderReport.resx">
+      <DependentUpon>FormSaleOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Setting\FrmMeasure\frmMeasure.resx">
       <DependentUpon>frmMeasure.cs</DependentUpon>
     </EmbeddedResource>
@@ -721,6 +745,17 @@
     </None>
     <None Include="Reports\dsReceiveItem.xss">
       <DependentUpon>dsReceiveItem.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\SaleOrderItem\dsSaleOrder.xsc">
+      <DependentUpon>dsSaleOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\SaleOrderItem\dsSaleOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSaleOrder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\SaleOrderItem\dsSaleOrder.xss">
+      <DependentUpon>dsSaleOrder.xsd</DependentUpon>
     </None>
     <None Include="Resources\Logo32x32.png" />
   </ItemGroup>

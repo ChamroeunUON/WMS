@@ -13,6 +13,7 @@ using WinForm.Inventory.ProductMaster;
 using WinForm.Models;
 using WinForm.Models.Support;
 using WinForm.Reports;
+using dsReceiveItem = WinForm.Reports.dsReceiveItem;
 
 namespace WinForm.Inventory.ReceivItem
 {
@@ -50,7 +51,7 @@ namespace WinForm.Inventory.ReceivItem
         {
             var frm = new FormListWarehouse();
             frm.ShowDialog();
-            txtWarehouseId.Text = frm.WarehouseId;
+            txtWarehouseId.Text = frm.WarehouseId.ToString();
             txtWarehouse.Text = frm.WarehouseName;
         }
 
@@ -263,9 +264,10 @@ namespace WinForm.Inventory.ReceivItem
 
 
                     var ds = new dsReceiveItem();
-
+                    
                     ds.Merge(dt1);
                     ds.Merge(dt2);
+
 
                     var rpt = new crptReceiveItem();
                     rpt.SetDataSource(ds);

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSaleOrder" targetNamespace="http://tempuri.org/dsSaleOrder.xsd" xmlns:mstns="http://tempuri.org/dsSaleOrder.xsd" xmlns="http://tempuri.org/dsSaleOrder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSaleOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSaleOrder" msprop:Generator_UserDSName="dsSaleOrder">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SaleOrder" msprop:Generator_TableClassName="SaleOrderDataTable" msprop:Generator_TableVarName="tableSaleOrder" msprop:Generator_TablePropName="SaleOrder" msprop:Generator_RowDeletingName="SaleOrderRowDeleting" msprop:Generator_RowChangingName="SaleOrderRowChanging" msprop:Generator_RowEvHandlerName="SaleOrderRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleOrderRowDeleted" msprop:Generator_UserTableName="SaleOrder" msprop:Generator_RowChangedName="SaleOrderRowChanged" msprop:Generator_RowEvArgName="SaleOrderRowChangeEvent" msprop:Generator_RowClassName="SaleOrderRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SaleOrderItem" msprop:Generator_TableClassName="SaleOrderItemDataTable" msprop:Generator_TableVarName="tableSaleOrderItem" msprop:Generator_TablePropName="SaleOrderItem" msprop:Generator_RowDeletingName="SaleOrderItemRowDeleting" msprop:Generator_RowChangingName="SaleOrderItemRowChanging" msprop:Generator_RowEvHandlerName="SaleOrderItemRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleOrderItemRowDeleted" msprop:Generator_UserTableName="SaleOrderItem" msprop:Generator_RowChangedName="SaleOrderItemRowChanged" msprop:Generator_RowEvArgName="SaleOrderItemRowChangeEvent" msprop:Generator_RowClassName="SaleOrderItemRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

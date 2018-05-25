@@ -224,7 +224,8 @@ namespace WinForm.Inventory.ReceivItem
                             UserName = tran.User.UserNmae,
                             tran.TotalAmount,
                             tran.SupplierId,
-                            SupplierName = tran.Supplier.Name
+                            SupplierName = tran.Supplier.Name,
+                            SupplierPhone = tran.Supplier.Phone
                         })
                         .ToList();
                     var ti = _appContext.TransactionItems

@@ -671,6 +671,8 @@ namespace WinForm.Reports {
             
             private global::System.Data.DataColumn columnSupplierName;
             
+            private global::System.Data.DataColumn columnSupplierPhone;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transactionDataTable() {
@@ -754,6 +756,14 @@ namespace WinForm.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SupplierPhoneColumn {
+                get {
+                    return this.columnSupplierPhone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -789,7 +799,7 @@ namespace WinForm.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public transactionRow AddtransactionRow(string TransactionId, int UserId, int SupplierId, float TotalAmount, string UserName, string SupplierName) {
+            public transactionRow AddtransactionRow(string TransactionId, int UserId, int SupplierId, float TotalAmount, string UserName, string SupplierName, string SupplierPhone) {
                 transactionRow rowtransactionRow = ((transactionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionId,
@@ -797,7 +807,8 @@ namespace WinForm.Reports {
                         SupplierId,
                         TotalAmount,
                         UserName,
-                        SupplierName};
+                        SupplierName,
+                        SupplierPhone};
                 rowtransactionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtransactionRow);
                 return rowtransactionRow;
@@ -826,6 +837,7 @@ namespace WinForm.Reports {
                 this.columnTotalAmount = base.Columns["TotalAmount"];
                 this.columnUserName = base.Columns["UserName"];
                 this.columnSupplierName = base.Columns["SupplierName"];
+                this.columnSupplierPhone = base.Columns["SupplierPhone"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -843,6 +855,8 @@ namespace WinForm.Reports {
                 base.Columns.Add(this.columnUserName);
                 this.columnSupplierName = new global::System.Data.DataColumn("SupplierName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSupplierName);
+                this.columnSupplierPhone = new global::System.Data.DataColumn("SupplierPhone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplierPhone);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1320,6 +1334,22 @@ namespace WinForm.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SupplierPhone {
+                get {
+                    try {
+                        return ((string)(this[this.tabletransaction.SupplierPhoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SupplierPhone\' in table \'transaction\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletransaction.SupplierPhoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTransactionIdNull() {
                 return this.IsNull(this.tabletransaction.TransactionIdColumn);
             }
@@ -1388,6 +1418,18 @@ namespace WinForm.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSupplierNameNull() {
                 this[this.tabletransaction.SupplierNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSupplierPhoneNull() {
+                return this.IsNull(this.tabletransaction.SupplierPhoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSupplierPhoneNull() {
+                this[this.tabletransaction.SupplierPhoneColumn] = global::System.Convert.DBNull;
             }
         }
         

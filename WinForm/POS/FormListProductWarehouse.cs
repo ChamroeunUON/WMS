@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
-using WinForm.Inventory.ProductMaster;
 using WinForm.Models;
 
 namespace WinForm.POS
@@ -17,11 +17,27 @@ namespace WinForm.POS
             InitializeComponent();
         }
 
+        public List<ProducWarehouse> ProducWarehouse
+        {
+            get
+            {
+                var proId = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                var proWarehouse = _appContext.ProducWarehouses
+                    .Include(pro => pro.Product)
+                    .Include(cat => cat.Product.Category)
+                    .Where(id => id.WarehouseId == WarehouseId && id.ProductId == proId)
+                    .ToList();
+                return proWarehouse;
+            }
+        }
+
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            Hide();
         }
 
         public int WarehouseId { get; set; }
+
         private void FormListProductWarehouse_Load(object sender, EventArgs e)
         {
             var wId = WarehouseId;
@@ -44,7 +60,6 @@ namespace WinForm.POS
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
-           
         }
     }
 }

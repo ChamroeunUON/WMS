@@ -289,3 +289,4 @@ C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.Generat
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.exe
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.pdb
 C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Reports.ReceiveItems.FormSaleOrderReport.resources
+C:\Users\chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache

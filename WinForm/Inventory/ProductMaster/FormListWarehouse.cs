@@ -13,7 +13,7 @@ namespace WinForm.Inventory.ProductMaster
 {
     public partial class FormListWarehouse : Form
     {
-        private readonly AppContext _appContext;
+        private AppContext _appContext;
         private Models.ProducWarehouse _producWarehouse;
         public FormListWarehouse()
         {

@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity.Migrations;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using WinForm.Models;
 
 namespace WinForm.Setting.POSSetting
 {
-    public partial class te : Office2007Form
+    public partial class FormSetting : Office2007Form
     {
-        public te()
+        public FormSetting()
         {
             InitializeComponent();
         }
@@ -34,14 +27,11 @@ namespace WinForm.Setting.POSSetting
                     txtQuotePre.Text = setting1.QuotePre;
                     txtInvoice.Text = setting1.InvoicePre;
                     txtPayment.Text = setting1.PaymentPre;
-                  
                 }
-
-
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             using (var appContext = new AppContext())
             {
@@ -50,7 +40,7 @@ namespace WinForm.Setting.POSSetting
                 {
                     if (setting1 == null)
                     {
-                        var settig = new Models.Support.Setting
+                        var s = new Models.Support.Setting
                         {
                             AdjustPre = txtAdjusment.Text,
                             InvoicePre = txtInvoice.Text,
@@ -60,7 +50,7 @@ namespace WinForm.Setting.POSSetting
                             QuotePre = txtQuotePre.Text,
                             SaleOrderPre = txtSaleOrderpre.Text
                         };
-                        appContext.Settings.Add(settig);
+                        appContext.Settings.Add(s);
                         MyMessage.Success(@"Inserted");
                     }
                     else
@@ -72,13 +62,11 @@ namespace WinForm.Setting.POSSetting
                         setting1.ReceivePre = txtReceive.Text;
                         setting1.QuotePre = txtQuotePre.Text;
                         setting1.SaleOrderPre = txtSaleOrderpre.Text;
-                        appContext.Settings.AddOrUpdate();
+                        appContext.Settings.Add(setting1);
                         MyMessage.Success(@"Uodated");
                     }
                     appContext.SaveChanges();
-
                 }
-                
             }
         }
     }

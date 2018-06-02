@@ -12,15 +12,12 @@
   <xs:element name="dsSaleOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSaleOrder" msprop:Generator_UserDSName="dsSaleOrder">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SaleOrder" msprop:Generator_TableClassName="SaleOrderDataTable" msprop:Generator_TableVarName="tableSaleOrder" msprop:Generator_RowChangedName="SaleOrderRowChanged" msprop:Generator_TablePropName="SaleOrder" msprop:Generator_RowDeletingName="SaleOrderRowDeleting" msprop:Generator_RowChangingName="SaleOrderRowChanging" msprop:Generator_RowEvHandlerName="SaleOrderRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleOrderRowDeleted" msprop:Generator_RowClassName="SaleOrderRow" msprop:Generator_UserTableName="SaleOrder" msprop:Generator_RowEvArgName="SaleOrderRowChangeEvent">
+        <xs:element name="SaleOrder" msprop:Generator_TableClassName="SaleOrderDataTable" msprop:Generator_TableVarName="tableSaleOrder" msprop:Generator_TablePropName="SaleOrder" msprop:Generator_RowDeletingName="SaleOrderRowDeleting" msprop:Generator_RowChangingName="SaleOrderRowChanging" msprop:Generator_RowEvHandlerName="SaleOrderRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleOrderRowDeleted" msprop:Generator_UserTableName="SaleOrder" msprop:Generator_RowChangedName="SaleOrderRowChanged" msprop:Generator_RowEvArgName="SaleOrderRowChangeEvent" msprop:Generator_RowClassName="SaleOrderRow">
           <xs:complexType>
-            <xs:sequence>
-              <xs:element name="SaleOrderId" msprop:Generator_ColumnVarNameInTable="columnSaleOrderId" msprop:Generator_ColumnPropNameInRow="SaleOrderId" msprop:Generator_ColumnPropNameInTable="SaleOrderIdColumn" msprop:Generator_UserColumnName="SaleOrderId" type="xs:string" minOccurs="0" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" type="xs:string" minOccurs="0" />
-              <xs:element name="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_UserColumnName="CustomerName" type="xs:string" minOccurs="0" />
-              <xs:element name="CustomerId" msprop:Generator_ColumnVarNameInTable="columnCustomerId" msprop:Generator_ColumnPropNameInRow="CustomerId" msprop:Generator_ColumnPropNameInTable="CustomerIdColumn" msprop:Generator_UserColumnName="CustomerId" type="xs:int" minOccurs="0" />
-              <xs:element name="SubTotal" msprop:Generator_ColumnVarNameInTable="columnSubTotal" msprop:Generator_ColumnPropNameInRow="SubTotal" msprop:Generator_ColumnPropNameInTable="SubTotalColumn" msprop:Generator_UserColumnName="SubTotal" type="xs:float" minOccurs="0" />
-            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SaleOrderItem" msprop:Generator_TableClassName="SaleOrderItemDataTable" msprop:Generator_TableVarName="tableSaleOrderItem" msprop:Generator_TablePropName="SaleOrderItem" msprop:Generator_RowDeletingName="SaleOrderItemRowDeleting" msprop:Generator_RowChangingName="SaleOrderItemRowChanging" msprop:Generator_RowEvHandlerName="SaleOrderItemRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleOrderItemRowDeleted" msprop:Generator_UserTableName="SaleOrderItem" msprop:Generator_RowChangedName="SaleOrderItemRowChanged" msprop:Generator_RowEvArgName="SaleOrderItemRowChangeEvent" msprop:Generator_RowClassName="SaleOrderItemRow">
+          <xs:complexType>
           </xs:complexType>
         </xs:element>
       </xs:choice>

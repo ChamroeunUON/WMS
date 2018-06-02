@@ -11,24 +11,24 @@ namespace WinForm.Administrator
     {
         public string DefaultString = "N/A";
         private readonly AppContext _appContext;
-//        private Models.Customer _customer;
-//        private Models.Customer FormData
-//        {
-//            
-//            get
-//            {
-//                var customer = new Customer
-//                {
-//                    Name = txtName.Text,
-//                    Sex = cboSex.SelectedItem.ToString(),
-//                    Phone = txtPhone.Text,
-//                    Address = txtAddress.Text,
-//                    Email = txtEmail.Text,
-//                    Note = txtNote.Text
-//                };
-//                return customer;
-//            }
-//        }
+        private Models.Customer _customer;
+        private Models.Customer FormData
+        {
+            
+            get
+            {
+                var customer = new Customer
+                {
+                    Name = txtName.Text,
+                    Sex = cboSex.SelectedItem.ToString(),
+                    Phone = txtPhone.Text,
+                    Address = txtAddress.Text,
+                    Email = txtEmail.Text,
+                    Note = txtNote.Text
+                };
+                return customer;
+            }
+        }
         public frmCustomer()
         {
             _appContext = new AppContext();
@@ -81,24 +81,24 @@ namespace WinForm.Administrator
                 if (txtAddress.Text == "") txtAddress.Text = DefaultString;
                 if (txtPhone.Text == "") txtPhone.Text = DefaultString;
                 if (txtNote.Text == "") txtNote.Text = DefaultString;
-//
-//                if (_customer == null)
-//                {
-//                    var customer = FormData;
-//                    _appContext.Customers.Add(customer);
-//                }
-//                else
-//                {
-//                    _customer.Name = FormData.Name;
-//                    _customer.Sex = FormData.Sex;
-//                    _customer.Phone = FormData.Phone;
-//                    _customer.Email = FormData.Email;
-//                    _customer.Note = FormData.Note;
-//                    _customer.Address = FormData.Address;
-//                    
-//                }
-//                _appContext.SaveChanges();
-//                _customer = null;
+
+                if (_customer == null)
+                {
+                    var customer = FormData;
+                    _appContext.Customers.Add(customer);
+                }
+                else
+                {
+                    _customer.Name = FormData.Name;
+                    _customer.Sex = FormData.Sex;
+                    _customer.Phone = FormData.Phone;
+                    _customer.Email = FormData.Email;
+                    _customer.Note = FormData.Note;
+                    _customer.Address = FormData.Address;
+                    
+                }
+                _appContext.SaveChanges();
+                _customer = null;
                 MessageBox.Show("Successfuly", @"Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -118,34 +118,34 @@ namespace WinForm.Administrator
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-//            var customers = _appContext.Customers.ToList();
-//            foreach (var customer in customers)
+            var customers = _appContext.Customers.ToList();
+            foreach (var customer in customers)
             {
-//                dataGridView1.Rows.Add(customer.Id, customer.Name, customer.Sex, customer.Phone, customer.Address);
+                dataGridView1.Rows.Add(customer.CusId, customer.Name, customer.Sex, customer.Phone, customer.Address);
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-//            try
-//            {
-//                var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-//                 _customer=_appContext.Customers.Find(id);
-//                if (_customer != null)
-//                {
-//                    txtName.Text = _customer.Name;
-//                    cboSex.SelectedItem = _customer.Sex;
-//                    txtPhone.Text = _customer.Phone;
-//                    txtEmail.Text = _customer.Email;
-//                    txtAddress.Text = _customer.Address;
-//                    txtNote.Text = _customer.Note;
-//                }
-//                tabControl1.SelectedIndex = 0;
-//            }
-//            catch (Exception exception)
-//            {
-//                MessageBox.Show(exception + " ");
-//            }
+            try
+            {
+                var id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                 _customer=_appContext.Customers.Find(id);
+                if (_customer != null)
+                {
+                    txtName.Text = _customer.Name;
+                    cboSex.SelectedItem = _customer.Sex;
+                    txtPhone.Text = _customer.Phone;
+                    txtEmail.Text = _customer.Email;
+                    txtAddress.Text = _customer.Address;
+                    txtNote.Text = _customer.Note;
+                }
+                tabControl1.SelectedIndex = 0;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception + " ");
+            }
           
         }
 
@@ -165,8 +165,8 @@ namespace WinForm.Administrator
             else
             {
                 var id = Convert.ToInt16(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-//                var customer = _appContext.Customers.Find(id);
-//                _appContext.Customers.Remove(customer);
+                var customer = _appContext.Customers.Find(id);
+                _appContext.Customers.Remove(customer);
                 _appContext.SaveChanges();
                 tabControl1_SelectedIndexChanged(null,null);
             }

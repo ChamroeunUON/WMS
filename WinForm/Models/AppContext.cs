@@ -12,6 +12,7 @@ namespace WinForm.Models
     {
         public DbSet<Support.Setting> Settings { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -21,9 +22,9 @@ namespace WinForm.Models
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<TransactionItem> TransactionItems { get; set; }
         public DbSet<ProducWarehouse> ProducWarehouses { get; set; }
-        public DbSet<Customer> Customers { get; set; }
         public DbSet<SaleOrder> SaleOrders { get; set; }
-//        public DbSet<SaleOrderItem> SaleOrderItems { get; set; }
+        public DbSet<SaleOrderItem> SaleOrderItems { get; set; }
+        
         public AppContext()
         {
             

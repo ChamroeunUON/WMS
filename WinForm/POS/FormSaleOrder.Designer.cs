@@ -60,7 +60,7 @@
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.txtWarehouseId = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtUserId = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
@@ -122,7 +122,7 @@
             this.ts.Controls.Add(this.txtCustomerName);
             this.ts.Controls.Add(this.txtNote);
             this.ts.Controls.Add(this.txtWarehouseId);
-            this.ts.Controls.Add(this.txtUser);
+            this.ts.Controls.Add(this.txtUserId);
             this.ts.Controls.Add(this.label13);
             this.ts.Controls.Add(this.label15);
             this.ts.Controls.Add(this.txtCustomerID);
@@ -366,12 +366,12 @@
             this.txtWarehouseId.Size = new System.Drawing.Size(200, 20);
             this.txtWarehouseId.TabIndex = 15;
             // 
-            // txtUser
+            // txtUserId
             // 
-            this.txtUser.Location = new System.Drawing.Point(168, 168);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(237, 20);
-            this.txtUser.TabIndex = 14;
+            this.txtUserId.Location = new System.Drawing.Point(168, 168);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(237, 20);
+            this.txtUserId.TabIndex = 14;
             // 
             // label13
             // 
@@ -578,7 +578,7 @@
         private System.Windows.Forms.DateTimePicker dateSaleOrder;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.TextBox txtSaleOrderID;
         private System.Windows.Forms.Label label6;

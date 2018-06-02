@@ -416,6 +416,58 @@
     <Compile Include="Migrations\201806011627116_AddProductToSalrOrderItem.Designer.cs">
       <DependentUpon>201806011627116_AddProductToSalrOrderItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806020658096_EditPropertiesProWarehouse.cs" />
+    <Compile Include="Migrations\201806020658096_EditPropertiesProWarehouse.Designer.cs">
+      <DependentUpon>201806020658096_EditPropertiesProWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021637105_editCustomer.cs" />
+    <Compile Include="Migrations\201806021637105_editCustomer.Designer.cs">
+      <DependentUpon>201806021637105_editCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021646290_addSaleOrderItem.cs" />
+    <Compile Include="Migrations\201806021646290_addSaleOrderItem.Designer.cs">
+      <DependentUpon>201806021646290_addSaleOrderItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021650119_addSaleOrderItemUser.cs" />
+    <Compile Include="Migrations\201806021650119_addSaleOrderItemUser.Designer.cs">
+      <DependentUpon>201806021650119_addSaleOrderItemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021656361_addSaleOrderItemUser1.cs" />
+    <Compile Include="Migrations\201806021656361_addSaleOrderItemUser1.Designer.cs">
+      <DependentUpon>201806021656361_addSaleOrderItemUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021756518_DeleteCustomerId.cs" />
+    <Compile Include="Migrations\201806021756518_DeleteCustomerId.Designer.cs">
+      <DependentUpon>201806021756518_DeleteCustomerId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021801302_AddCustomer.cs" />
+    <Compile Include="Migrations\201806021801302_AddCustomer.Designer.cs">
+      <DependentUpon>201806021801302_AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021813042_AddCustomerNew.cs" />
+    <Compile Include="Migrations\201806021813042_AddCustomerNew.Designer.cs">
+      <DependentUpon>201806021813042_AddCustomerNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021816220_AddCustomerNewProperties.cs" />
+    <Compile Include="Migrations\201806021816220_AddCustomerNewProperties.Designer.cs">
+      <DependentUpon>201806021816220_AddCustomerNewProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021818224_AddCustomerNewProperties1.cs" />
+    <Compile Include="Migrations\201806021818224_AddCustomerNewProperties1.Designer.cs">
+      <DependentUpon>201806021818224_AddCustomerNewProperties1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021823432_201806021818224_AddCustomerNewProperties1.cs" />
+    <Compile Include="Migrations\201806021823432_201806021818224_AddCustomerNewProperties1.Designer.cs">
+      <DependentUpon>201806021823432_201806021818224_AddCustomerNewProperties1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021829423_AddSaleOrder.cs" />
+    <Compile Include="Migrations\201806021829423_AddSaleOrder.Designer.cs">
+      <DependentUpon>201806021829423_AddSaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021833330_AddSaleOrderItem.cs" />
+    <Compile Include="Migrations\201806021833330_AddSaleOrderItem.Designer.cs">
+      <DependentUpon>201806021833330_AddSaleOrderItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -425,7 +477,6 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProducWarehouse.cs" />
     <Compile Include="Models\SaleOrder.cs" />
-    <Compile Include="Models\SaleOrderItem.cs" />
     <Compile Include="Models\Support\SaleType.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Support\CurrentUser.cs" />
@@ -718,6 +769,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806011627116_AddProductToSalrOrderItem.resx">
       <DependentUpon>201806011627116_AddProductToSalrOrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806020658096_EditPropertiesProWarehouse.resx">
+      <DependentUpon>201806020658096_EditPropertiesProWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021637105_editCustomer.resx">
+      <DependentUpon>201806021637105_editCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021646290_addSaleOrderItem.resx">
+      <DependentUpon>201806021646290_addSaleOrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021650119_addSaleOrderItemUser.resx">
+      <DependentUpon>201806021650119_addSaleOrderItemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021656361_addSaleOrderItemUser1.resx">
+      <DependentUpon>201806021656361_addSaleOrderItemUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021756518_DeleteCustomerId.resx">
+      <DependentUpon>201806021756518_DeleteCustomerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021801302_AddCustomer.resx">
+      <DependentUpon>201806021801302_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021813042_AddCustomerNew.resx">
+      <DependentUpon>201806021813042_AddCustomerNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021816220_AddCustomerNewProperties.resx">
+      <DependentUpon>201806021816220_AddCustomerNewProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021818224_AddCustomerNewProperties1.resx">
+      <DependentUpon>201806021818224_AddCustomerNewProperties1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021823432_201806021818224_AddCustomerNewProperties1.resx">
+      <DependentUpon>201806021823432_201806021818224_AddCustomerNewProperties1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021829423_AddSaleOrder.resx">
+      <DependentUpon>201806021829423_AddSaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021833330_AddSaleOrderItem.resx">
+      <DependentUpon>201806021833330_AddSaleOrderItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS\FormListCustomer.resx">
       <DependentUpon>FormListCustomer.cs</DependentUpon>

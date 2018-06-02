@@ -22,7 +22,6 @@ namespace WinForm.POS
     {
         private int _idMax;
         private readonly AppContext _appContext;
-
         public FormSaleOrder()
         {
             _appContext = new AppContext();
@@ -156,13 +155,33 @@ namespace WinForm.POS
                         dataGridView1.Rows[rowIndex].Cells[8].Value = discont.ToString("C");
                         dataGridView1.Rows[rowIndex].Cells[7].Value = di + "%";
                         dataGridView1.Rows[rowIndex].Cells[9].Value = vi + "%";
+
+                         float sum = 0;
+                        for (var row = 0; row < dataGridView1.Rows.Count-1; row++)
+                        {
+                            var amt = float.Parse(dataGridView1.Rows[row].Cells[11].Value.ToString().Replace("$", ""));
+                            sum += amt;
+                        }
+                        txtSubtotal.Text = sum.ToString("C");
+                        if (string.IsNullOrEmpty(txtDiscountP.Text))
+                        {
+                            txtDiscountP.Text = @"0%";
+                        }
+                        var subTotal = float.Parse(txtSubtotal.Text.Replace("$", ""));
+                        var percent = float.Parse(txtDiscountP.Text.Replace("%", ""));
+                        var disA = (percent / 100) * subTotal;
+                        var balance = subTotal - disA;
+                        txtDisAmount.Text = disA.ToString("C");
+                        txtBalance.Text = balance.ToString("C");
+                        txtGrandTotal.Text = balance.ToString("C");
+                        txtDeposit.Text = @"0 $";
+                        txtDiscountP.Text = percent + @"%";
                     }
                     break;
                 default:
                     return;
             }
         }
-<<<<<<< HEAD
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -351,7 +370,5 @@ namespace WinForm.POS
 //            };
 //            return saleOrderItem;
 //        }
-=======
->>>>>>> parent of d25a8cc... Add Some Work in SaleOrder
     }
 }

@@ -72,12 +72,21 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\envdte.dll</HintPath>
+    </Reference>
     <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="NgenInstaller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\NgenInstaller.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -91,6 +100,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Toolbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\Toolbox.exe</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrator\Employee\frmEmployee.cs">
@@ -391,7 +404,6 @@
     <Compile Include="Migrations\201805251719390_AddSupplierInTransaction.Designer.cs">
       <DependentUpon>201805251719390_AddSupplierInTransaction.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Migrations\201805311740521_SeedUser.cs" />
     <Compile Include="Migrations\201805311740521_SeedUser.Designer.cs">
       <DependentUpon>201805311740521_SeedUser.cs</DependentUpon>
@@ -456,8 +468,6 @@
     <Compile Include="Migrations\201806021833330_AddSaleOrderItem.Designer.cs">
       <DependentUpon>201806021833330_AddSaleOrderItem.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> parent of d25a8cc... Add Some Work in SaleOrder
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -489,6 +499,12 @@
     </Compile>
     <Compile Include="POS\FormListProductWarehouse.Designer.cs">
       <DependentUpon>FormListProductWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POS\FormPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS\FormPayment.Designer.cs">
+      <DependentUpon>FormPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="POS\FormSaleOrder.cs">
       <SubType>Form</SubType>
@@ -745,7 +761,6 @@
     <EmbeddedResource Include="Migrations\201805251719390_AddSupplierInTransaction.resx">
       <DependentUpon>201805251719390_AddSupplierInTransaction.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201805311740521_SeedUser.resx">
       <DependentUpon>201805311740521_SeedUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -794,13 +809,14 @@
     <EmbeddedResource Include="Migrations\201806021833330_AddSaleOrderItem.resx">
       <DependentUpon>201806021833330_AddSaleOrderItem.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> parent of d25a8cc... Add Some Work in SaleOrder
     <EmbeddedResource Include="POS\FormListCustomer.resx">
       <DependentUpon>FormListCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS\FormListProductWarehouse.resx">
       <DependentUpon>FormListProductWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS\FormPayment.resx">
+      <DependentUpon>FormPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS\FormSaleOrder.resx">
       <DependentUpon>FormSaleOrder.cs</DependentUpon>

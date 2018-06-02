@@ -1,6 +1,6 @@
 ﻿namespace WinForm.Setting.POSSetting
 {
-    partial class te
+    partial class FormSetting
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label = new System.Windows.Forms.Label();
             this.txtInvoice = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -43,6 +44,8 @@
             this.txtSaleOrderpre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtQuotePre = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
             // label
@@ -167,7 +170,17 @@
             this.txtQuotePre.Size = new System.Drawing.Size(196, 20);
             this.txtQuotePre.TabIndex = 1;
             // 
-            // te
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(153, 26);
+            // 
+            // FormSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,7 +201,7 @@
             this.Controls.Add(this.txtInvoice);
             this.Controls.Add(this.label);
             this.DoubleBuffered = true;
-            this.Name = "te";
+            this.Name = "FormSetting";
             this.Text = "FormPOSSetting";
             this.Load += new System.EventHandler(this.FormPOSSetting_Load);
             this.ResumeLayout(false);
@@ -213,5 +226,7 @@
         private System.Windows.Forms.TextBox txtSaleOrderpre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtQuotePre;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }

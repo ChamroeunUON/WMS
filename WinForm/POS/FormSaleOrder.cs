@@ -18,7 +18,6 @@ namespace WinForm.POS
     {
         private int _idMax;
         private readonly AppContext _appContext;
-
         public FormSaleOrder()
         {
             _appContext = new AppContext();
@@ -152,11 +151,111 @@ namespace WinForm.POS
                         dataGridView1.Rows[rowIndex].Cells[8].Value = discont.ToString("C");
                         dataGridView1.Rows[rowIndex].Cells[7].Value = di + "%";
                         dataGridView1.Rows[rowIndex].Cells[9].Value = vi + "%";
+
+                         float sum = 0;
+                        for (var row = 0; row < dataGridView1.Rows.Count-1; row++)
+                        {
+                            var amt = float.Parse(dataGridView1.Rows[row].Cells[11].Value.ToString().Replace("$", ""));
+                            sum += amt;
+                        }
+                        txtSubtotal.Text = sum.ToString("C");
+                        if (string.IsNullOrEmpty(txtDiscountP.Text))
+                        {
+                            txtDiscountP.Text = @"0%";
+                        }
+                        var subTotal = float.Parse(txtSubtotal.Text.Replace("$", ""));
+                        var percent = float.Parse(txtDiscountP.Text.Replace("%", ""));
+                        var disA = (percent / 100) * subTotal;
+                        var balance = subTotal - disA;
+                        txtDisAmount.Text = disA.ToString("C");
+                        txtBalance.Text = balance.ToString("C");
+                        txtGrandTotal.Text = balance.ToString("C");
+                        txtDeposit.Text = @"0 $";
+                        txtDiscountP.Text = percent + @"%";
                     }
                     break;
                 default:
                     return;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiscountP_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDiscountP.Text))
+            {
+                txtDiscountP.Text = @"0%";
+                return;
+            }
+            var subTotal = float.Parse(txtSubtotal.Text.Replace("$", ""));
+            var percent = float.Parse(txtDiscountP.Text.Replace("%", ""));
+            var disA = (percent / 100) * subTotal;
+            var balance = subTotal - disA;
+            txtDisAmount.Text = disA.ToString("C");
+            txtBalance.Text = balance.ToString("C");
+            txtGrandTotal.Text = balance.ToString("C");
+            txtDeposit.Text = @"0 $";
+            txtDiscountP.Text = percent + @"%";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var salrOrder = new SaleOrder
+            {
+                SaleOrderId = txtSaleOrderID.Text,
+                SaleDate = Convert.ToDateTime(Convert.ToDateTime(dateSaleOrder.Text).ToShortDateString()),
+                CustomerId = Convert.ToInt32(txtCustomerID.Text),
+                UserId = CurrentUser.GetCurrentUserId,
+                SaleType = SaleType.SaleOrder,
+                SubTotal = float.Parse(txtSubtotal.Text.Replace("$", "")),
+                DisPercent = float.Parse(txtDiscountP.Text.Replace("%", "")),
+                DisAmount = float.Parse(txtDisAmount.Text.Replace("$", "")),
+                Balance = float.Parse(txtBalance.Text.Replace("$", "")),
+                Deposit = float.Parse(txtDeposit.Text.Replace("$", "")),
+                GrandTotal = float.Parse(txtGrandTotal.Text.Replace("$", "")),
+                Status = "New",
+                Note = ""
+            };
+            _appContext.SaleOrders.Add(salrOrder);
+            for (var rowIndex = 0; rowIndex < dataGridView1.RowCount - 1; rowIndex++)
+            {
+                var per = dataGridView1.Rows[rowIndex].Cells[7].Value.ToString();
+                var vat = dataGridView1.Rows[rowIndex].Cells[9].Value.ToString();
+                var pr = dataGridView1.Rows[rowIndex].Cells[10].Value.ToString();
+                var am = dataGridView1.Rows[rowIndex].Cells[11].Value.ToString();
+                var saleOrderItem = new SaleOrderItem
+                {
+                    SaleOrderId = txtSaleOrderID.Text,
+                    ProductId = int.Parse(dataGridView1.Rows[rowIndex].Cells[0].Value.ToString()),
+                    Qty = int.Parse(dataGridView1.Rows[rowIndex].Cells[6].Value.ToString()),
+                    DisPercent = float.Parse(per.Replace("%",null)),
+                    VatPercent = float.Parse(vat.Replace("%", null)),
+                    Price = float.Parse(pr.Replace("$", null)),
+                    Amount = float.Parse(am.Replace("$", null)),
+                    WarehouseId = Convert.ToInt32(txtWarehouseId.Text),
+                    Note = dataGridView1.Rows[rowIndex].Cells[12].Value.ToString()
+                };
+                
+                _appContext.SaleOrderItems.Add(saleOrderItem);
+
+            }
+            _appContext.SaveChanges();
+            MyMessage.Success("Saved");
+
         }
     }
 }

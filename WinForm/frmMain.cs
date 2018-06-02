@@ -150,7 +150,7 @@ namespace WinForm
 
         private void btnPosSetting_Click(object sender, EventArgs e)
         {
-            var frm = new FormSetting {MdiParent = this};
+            var frm = new te {MdiParent = this};
             frm.Show();
 
         }
@@ -164,16 +164,6 @@ namespace WinForm
         {
             var frm = new FormSaleOrder { MdiParent = this};
             frm.Show();
-        }
-
-        private void ribbonTabItem3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ribbonPanel4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

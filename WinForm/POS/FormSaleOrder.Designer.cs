@@ -34,6 +34,35 @@
             this.ts = new System.Windows.Forms.TabPage();
             this.btnWarehouse = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dateSaleOrder = new System.Windows.Forms.DateTimePicker();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtWarehouseName = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.txtWarehouseId = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
+            this.txtUserId = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+=======
+            this.txtUser = new System.Windows.Forms.TextBox();
+>>>>>>> parent of d25a8cc... Add Some Work in SaleOrder
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
+            this.txtSaleOrderID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.TabPage();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,39 +76,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.dateSaleOrder = new System.Windows.Forms.DateTimePicker();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
-            this.txtDeposit = new System.Windows.Forms.TextBox();
-            this.txtDisAmount = new System.Windows.Forms.TextBox();
-            this.txtDiscountP = new System.Windows.Forms.TextBox();
-            this.txtGrandTotal = new System.Windows.Forms.TextBox();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtWarehouseName = new System.Windows.Forms.TextBox();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.txtNote = new System.Windows.Forms.TextBox();
-            this.txtWarehouseId = new System.Windows.Forms.TextBox();
-            this.txtUserId = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtSaleOrderID = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCustomer = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.List = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.txtSaleId.SuspendLayout();
             this.ts.SuspendLayout();
@@ -92,43 +88,39 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(936, 594);
+            this.panel1.Size = new System.Drawing.Size(990, 569);
             this.panel1.TabIndex = 0;
             // 
             // txtSaleId
             // 
             this.txtSaleId.Controls.Add(this.ts);
-            this.txtSaleId.Controls.Add(this.List);
+            this.txtSaleId.Controls.Add(this.btnSave);
             this.txtSaleId.Location = new System.Drawing.Point(12, 12);
             this.txtSaleId.Name = "txtSaleId";
             this.txtSaleId.SelectedIndex = 0;
-            this.txtSaleId.Size = new System.Drawing.Size(901, 579);
+            this.txtSaleId.Size = new System.Drawing.Size(957, 551);
             this.txtSaleId.TabIndex = 0;
             // 
             // ts
             // 
             this.ts.Controls.Add(this.btnWarehouse);
             this.ts.Controls.Add(this.dataGridView1);
-            this.ts.Controls.Add(this.btnSave);
+            this.ts.Controls.Add(this.button2);
             this.ts.Controls.Add(this.dateSaleOrder);
-            this.ts.Controls.Add(this.txtSubtotal);
-            this.ts.Controls.Add(this.txtDeposit);
-            this.ts.Controls.Add(this.txtDisAmount);
-            this.ts.Controls.Add(this.txtDiscountP);
-            this.ts.Controls.Add(this.txtGrandTotal);
-            this.ts.Controls.Add(this.txtBalance);
+            this.ts.Controls.Add(this.textBox5);
             this.ts.Controls.Add(this.txtUserName);
             this.ts.Controls.Add(this.txtWarehouseName);
             this.ts.Controls.Add(this.txtCustomerName);
             this.ts.Controls.Add(this.txtNote);
             this.ts.Controls.Add(this.txtWarehouseId);
+<<<<<<< HEAD
             this.ts.Controls.Add(this.txtUserId);
             this.ts.Controls.Add(this.label13);
             this.ts.Controls.Add(this.label15);
+=======
+            this.ts.Controls.Add(this.txtUser);
+>>>>>>> parent of d25a8cc... Add Some Work in SaleOrder
             this.ts.Controls.Add(this.txtCustomerID);
-            this.ts.Controls.Add(this.label11);
-            this.ts.Controls.Add(this.label12);
-            this.ts.Controls.Add(this.label14);
             this.ts.Controls.Add(this.txtSaleOrderID);
             this.ts.Controls.Add(this.label9);
             this.ts.Controls.Add(this.label6);
@@ -144,7 +136,7 @@
             this.ts.Location = new System.Drawing.Point(4, 22);
             this.ts.Name = "ts";
             this.ts.Padding = new System.Windows.Forms.Padding(3);
-            this.ts.Size = new System.Drawing.Size(893, 553);
+            this.ts.Size = new System.Drawing.Size(949, 525);
             this.ts.TabIndex = 0;
             this.ts.Text = "New";
             this.ts.UseVisualStyleBackColor = true;
@@ -188,94 +180,19 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(821, 163);
+            this.dataGridView1.Size = new System.Drawing.Size(821, 208);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentEndEdit);
             // 
-            // Column1
+            // button2
             // 
-            this.Column1.HeaderText = "ProId";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Name EN";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Name KH";
-            this.Column4.Name = "Column4";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Category";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 50;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Measure";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 50;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Add";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 30;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Qty";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Dis";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 50;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "DisA";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 50;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "VAT";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 50;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Price";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 50;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Amount";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Note";
-            this.Column13.Name = "Column13";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(35, 438);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 10;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.button2.Location = new System.Drawing.Point(35, 480);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // dateSaleOrder
             // 
@@ -285,51 +202,12 @@
             this.dateSaleOrder.Size = new System.Drawing.Size(237, 20);
             this.dateSaleOrder.TabIndex = 17;
             // 
-            // txtSubtotal
+            // textBox5
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(322, 440);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(201, 20);
-            this.txtSubtotal.TabIndex = 12;
-            this.txtSubtotal.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtDeposit
-            // 
-            this.txtDeposit.Location = new System.Drawing.Point(322, 520);
-            this.txtDeposit.Name = "txtDeposit";
-            this.txtDeposit.Size = new System.Drawing.Size(201, 20);
-            this.txtDeposit.TabIndex = 12;
-            this.txtDeposit.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtDisAmount
-            // 
-            this.txtDisAmount.Location = new System.Drawing.Point(322, 482);
-            this.txtDisAmount.Name = "txtDisAmount";
-            this.txtDisAmount.Size = new System.Drawing.Size(201, 20);
-            this.txtDisAmount.TabIndex = 12;
-            this.txtDisAmount.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtDiscountP
-            // 
-            this.txtDiscountP.Location = new System.Drawing.Point(655, 438);
-            this.txtDiscountP.Name = "txtDiscountP";
-            this.txtDiscountP.Size = new System.Drawing.Size(201, 20);
-            this.txtDiscountP.TabIndex = 12;
-            this.txtDiscountP.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDiscountP_KeyUp);
-            // 
-            // txtGrandTotal
-            // 
-            this.txtGrandTotal.Location = new System.Drawing.Point(655, 518);
-            this.txtGrandTotal.Name = "txtGrandTotal";
-            this.txtGrandTotal.Size = new System.Drawing.Size(201, 20);
-            this.txtGrandTotal.TabIndex = 12;
-            // 
-            // txtBalance
-            // 
-            this.txtBalance.Location = new System.Drawing.Point(655, 480);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(201, 20);
-            this.txtBalance.TabIndex = 12;
+            this.textBox5.Location = new System.Drawing.Point(655, 480);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(201, 20);
+            this.textBox5.TabIndex = 12;
             // 
             // txtUserName
             // 
@@ -373,62 +251,12 @@
             this.txtUserId.Size = new System.Drawing.Size(237, 20);
             this.txtUserId.TabIndex = 14;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(207, 445);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Sub Total $";
-            this.label13.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(207, 525);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 13);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Deposit $";
-            this.label15.Click += new System.EventHandler(this.label11_Click);
-            // 
             // txtCustomerID
             // 
             this.txtCustomerID.Location = new System.Drawing.Point(168, 82);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(200, 20);
             this.txtCustomerID.TabIndex = 15;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(207, 487);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 13);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Discount Amount $";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(540, 443);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 13);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Discount %";
-            this.label12.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(540, 523);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Grand Total $";
-            this.label14.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtSaleOrderID
             // 
@@ -442,10 +270,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(540, 485);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Balance $";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.label9.Text = "Total Amount";
             // 
             // label6
             // 
@@ -538,27 +365,100 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "SaleOrder Id";
             // 
-            // List
+            // btnSave
             // 
-            this.List.Location = new System.Drawing.Point(4, 22);
-            this.List.Name = "List";
-            this.List.Padding = new System.Windows.Forms.Padding(3);
-            this.List.Size = new System.Drawing.Size(893, 553);
-            this.List.TabIndex = 1;
-            this.List.Text = "List";
-            this.List.UseVisualStyleBackColor = true;
-            this.List.Click += new System.EventHandler(this.tabPage2_Click);
+            this.btnSave.Location = new System.Drawing.Point(4, 22);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(3);
+            this.btnSave.Size = new System.Drawing.Size(949, 525);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "List";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ProId";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Name EN";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Name KH";
+            this.Column4.Name = "Column4";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Category";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 50;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Measure";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 50;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Add";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 30;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Qty";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Dis";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 50;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "DisA";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 50;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "VAT";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 50;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Price";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 50;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Amount";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Note";
+            this.Column13.Name = "Column13";
             // 
             // FormSaleOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 594);
+            this.ClientSize = new System.Drawing.Size(990, 569);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Name = "FormSaleOrder";
             this.Text = "FormSaleOrder";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormSaleOrder_Load);
             this.panel1.ResumeLayout(false);
             this.txtSaleId.ResumeLayout(false);
@@ -574,7 +474,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl txtSaleId;
         private System.Windows.Forms.TabPage ts;
-        private System.Windows.Forms.TabPage List;
+        private System.Windows.Forms.TabPage btnSave;
         private System.Windows.Forms.DateTimePicker dateSaleOrder;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtCustomerName;
@@ -583,14 +483,14 @@
         private System.Windows.Forms.TextBox txtSaleOrderID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtBalance;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -612,15 +512,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.TextBox txtSubtotal;
-        private System.Windows.Forms.TextBox txtDeposit;
-        private System.Windows.Forms.TextBox txtDisAmount;
-        private System.Windows.Forms.TextBox txtDiscountP;
-        private System.Windows.Forms.TextBox txtGrandTotal;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
     }
 }

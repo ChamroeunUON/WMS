@@ -500,9 +500,7 @@
     <Compile Include="POS\FormListProductWarehouse.Designer.cs">
       <DependentUpon>FormListProductWarehouse.cs</DependentUpon>
     </Compile>
-    <Compile Include="POS\FormPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="POS\FormPayment.cs" />
     <Compile Include="POS\FormPayment.Designer.cs">
       <DependentUpon>FormPayment.cs</DependentUpon>
     </Compile>

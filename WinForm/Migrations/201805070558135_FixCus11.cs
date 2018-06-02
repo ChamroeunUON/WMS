@@ -8,15 +8,15 @@ namespace WinForm.Migrations
         public override void Up()
         {
             DropPrimaryKey("dbo.Customers");
-            AlterColumn("dbo.Customers", "CusId", c => c.Int(nullable: false, identity: true));
-            AddPrimaryKey("dbo.Customers", "CusId");
+            AlterColumn("dbo.Customers", "CustomerId", c => c.Int(nullable: false, identity: true));
+            AddPrimaryKey("dbo.Customers", "CustomerId");
         }
         
         public override void Down()
         {
             DropPrimaryKey("dbo.Customers");
-            AlterColumn("dbo.Customers", "CusId", c => c.Int(nullable: false));
-            AddPrimaryKey("dbo.Customers", "CusId");
+            AlterColumn("dbo.Customers", "CustomerId", c => c.Int(nullable: false));
+            AddPrimaryKey("dbo.Customers", "CustomerId");
         }
     }
 }

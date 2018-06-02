@@ -28,7 +28,5 @@ namespace WinForm.Models
         public float Paid { get; set; }
         public string Status { get; set; }
         public string Note { get; set; }
-
-
     }
 }

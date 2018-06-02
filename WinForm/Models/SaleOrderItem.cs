@@ -16,8 +16,7 @@ namespace WinForm.Models
         public string SaleOrderId { get; set; }
         public SaleOrder SaleOrder { get; set; }
 
-        public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public IEnumerable<Product> Products { get; set; }
         public int WarehouseId { get; set; }
         public Warehouse Warehouse { get; set; }
         public int Qty { get; set; }

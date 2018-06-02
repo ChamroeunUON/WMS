@@ -24,12 +24,12 @@ namespace WinForm.POS
 
         private void FormListCustomer_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            var customers = _appContext.Customers.ToList();
-            foreach (var customer in customers)
-            {
-                dataGridView1.Rows.Add(customer.CusId,customer.Name, customer.Sex,customer.Email, customer.Phone, customer.Note, customer.Address);
-            }
+//            dataGridView1.Rows.Clear();
+//            var customers = _appContext.Customers.ToList();
+//            foreach (var customer in customers)
+//            {
+//                dataGridView1.Rows.Add(customer.Id,customer.Name, customer.Sex,customer.Email, customer.Phone, customer.Note, customer.Address);
+//            }
         }
 
         private void button1_Click(object sender, EventArgs e)

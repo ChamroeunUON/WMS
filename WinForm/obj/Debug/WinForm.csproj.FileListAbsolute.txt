@@ -426,3 +426,5 @@ C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\Interop.CrystalActiveX
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\Interop.CrystalReportViewerExportLib.dll
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\Interop.CrystalReportViewerWebReportSourceLib.dll
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.ResolveComReference.cache
+C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.SeedDefualtInformation.resources
+C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.SeedProduct.resources

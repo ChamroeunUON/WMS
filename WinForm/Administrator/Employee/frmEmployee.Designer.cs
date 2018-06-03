@@ -1,4 +1,9 @@
-﻿namespace WinForm.Administrator.Employee
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using WinForm.Models;
+using WinForm.Models.Support;
+
+namespace WinForm.Administrator.Employee
 {
     partial class frmEmployee
     {
@@ -6,7 +11,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -26,6 +30,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+        
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();

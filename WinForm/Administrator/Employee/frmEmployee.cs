@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using WinForm.Models;
+using WinForm.Models.Support;
 
 namespace WinForm.Administrator.Employee
 {
@@ -38,7 +39,7 @@ namespace WinForm.Administrator.Employee
         public frmEmployee()
         {
             _appContext = new AppContext();
-            InitializeComponent();
+                InitializeComponent();
         }
 
         private void frmEmployee_Load(object sender, EventArgs e)

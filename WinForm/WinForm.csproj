@@ -420,6 +420,14 @@
     <Compile Include="Migrations\201806030226029_AddkeySale.Designer.cs">
       <DependentUpon>201806030226029_AddkeySale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806030941572_SeedDefualtInformation.cs" />
+    <Compile Include="Migrations\201806030941572_SeedDefualtInformation.Designer.cs">
+      <DependentUpon>201806030941572_SeedDefualtInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806031001003_SeedProduct.cs" />
+    <Compile Include="Migrations\201806031001003_SeedProduct.Designer.cs">
+      <DependentUpon>201806031001003_SeedProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -728,6 +736,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806030226029_AddkeySale.resx">
       <DependentUpon>201806030226029_AddkeySale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806030941572_SeedDefualtInformation.resx">
+      <DependentUpon>201806030941572_SeedDefualtInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806031001003_SeedProduct.resx">
+      <DependentUpon>201806031001003_SeedProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS\FormListCustomer.resx">
       <DependentUpon>FormListCustomer.cs</DependentUpon>

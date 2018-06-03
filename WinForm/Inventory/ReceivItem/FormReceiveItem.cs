@@ -33,6 +33,11 @@ namespace WinForm.Inventory.ReceivItem
 
         private void FormReceiveItem_Load(object sender, EventArgs e)
         {
+            if (CurrentUser.GetCurrentUser != "Chamroeun")
+            {
+                MyMessage.Warning("Please Login as Chamroeun");
+                Application.Exit();
+            }
             txtUserId.Text = CurrentUser.GetCurrentUserId.ToString();
             txtUserName.Text = CurrentUser.GetCurrentUser;
             var list = _appContext.Transactions.ToList();

@@ -416,6 +416,10 @@
     <Compile Include="Migrations\201806011627116_AddProductToSalrOrderItem.Designer.cs">
       <DependentUpon>201806011627116_AddProductToSalrOrderItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806030226029_AddkeySale.cs" />
+    <Compile Include="Migrations\201806030226029_AddkeySale.Designer.cs">
+      <DependentUpon>201806030226029_AddkeySale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -488,6 +492,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>crptSaleOrder.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SaleOrderItem\dsSaleOrder.cs">
+      <DependentUpon>dsSaleOrder.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\SaleOrderItem\dsSaleOrder.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -719,6 +726,9 @@
     <EmbeddedResource Include="Migrations\201806011627116_AddProductToSalrOrderItem.resx">
       <DependentUpon>201806011627116_AddProductToSalrOrderItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806030226029_AddkeySale.resx">
+      <DependentUpon>201806030226029_AddkeySale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="POS\FormListCustomer.resx">
       <DependentUpon>FormListCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -943,9 +953,49 @@
   <ItemGroup>
     <None Include="Resources\012-money-4.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="CrystalActiveXReportViewerLib13">
+      <Guid>{B816E96D-D151-4000-BADB-53A2D8F3FC65}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportViewerExportLib">
+      <Guid>{5C21A516-C6AC-42F2-A7B7-846FFE1B122A}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportViewerWebReportSourceLib">
+      <Guid>{14173BA7-071D-4216-8C9B-EAB29A55E2D4}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

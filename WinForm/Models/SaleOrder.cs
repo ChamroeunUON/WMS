@@ -15,7 +15,7 @@ namespace WinForm.Models
         public string SaleOrderId { get; set; }
         public SaleType SaleType { get; set; }
         public DateTime SaleDate { get; set; }
-        public int CustomerId { get; set; }
+        public int CusId { get; set; }
         public Customer Customer { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }

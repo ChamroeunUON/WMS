@@ -314,6 +314,24 @@ namespace WinForm.Reports.SaleOrderItem {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SaleOrderDataTable : global::System.Data.TypedTableBase<SaleOrderRow> {
             
+            private global::System.Data.DataColumn columnSaleOrderId;
+            
+            private global::System.Data.DataColumn columnPercent;
+            
+            private global::System.Data.DataColumn columnDisA;
+            
+            private global::System.Data.DataColumn columnUserName;
+            
+            private global::System.Data.DataColumn columnCustomerName;
+            
+            private global::System.Data.DataColumn columnBalanc;
+            
+            private global::System.Data.DataColumn columnDeposit;
+            
+            private global::System.Data.DataColumn columnSubTotal;
+            
+            private global::System.Data.DataColumn columnGrandTotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SaleOrderDataTable() {
@@ -345,6 +363,78 @@ namespace WinForm.Reports.SaleOrderItem {
             protected SaleOrderDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SaleOrderIdColumn {
+                get {
+                    return this.columnSaleOrderId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PercentColumn {
+                get {
+                    return this.columnPercent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DisAColumn {
+                get {
+                    return this.columnDisA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UserNameColumn {
+                get {
+                    return this.columnUserName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CustomerNameColumn {
+                get {
+                    return this.columnCustomerName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BalancColumn {
+                get {
+                    return this.columnBalanc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DepositColumn {
+                get {
+                    return this.columnDeposit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SubTotalColumn {
+                get {
+                    return this.columnSubTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GrandTotalColumn {
+                get {
+                    return this.columnGrandTotal;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -384,9 +474,18 @@ namespace WinForm.Reports.SaleOrderItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SaleOrderRow AddSaleOrderRow() {
+            public SaleOrderRow AddSaleOrderRow(string SaleOrderId, float Percent, float DisA, string UserName, string CustomerName, float Balanc, float Deposit, float SubTotal, float GrandTotal) {
                 SaleOrderRow rowSaleOrderRow = ((SaleOrderRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
+                object[] columnValuesArray = new object[] {
+                        SaleOrderId,
+                        Percent,
+                        DisA,
+                        UserName,
+                        CustomerName,
+                        Balanc,
+                        Deposit,
+                        SubTotal,
+                        GrandTotal};
                 rowSaleOrderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSaleOrderRow);
                 return rowSaleOrderRow;
@@ -409,11 +508,38 @@ namespace WinForm.Reports.SaleOrderItem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnSaleOrderId = base.Columns["SaleOrderId"];
+                this.columnPercent = base.Columns["Percent"];
+                this.columnDisA = base.Columns["DisA"];
+                this.columnUserName = base.Columns["UserName"];
+                this.columnCustomerName = base.Columns["CustomerName"];
+                this.columnBalanc = base.Columns["Balanc"];
+                this.columnDeposit = base.Columns["Deposit"];
+                this.columnSubTotal = base.Columns["SubTotal"];
+                this.columnGrandTotal = base.Columns["GrandTotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnSaleOrderId = new global::System.Data.DataColumn("SaleOrderId", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSaleOrderId);
+                this.columnPercent = new global::System.Data.DataColumn("Percent", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPercent);
+                this.columnDisA = new global::System.Data.DataColumn("DisA", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDisA);
+                this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserName);
+                this.columnCustomerName = new global::System.Data.DataColumn("CustomerName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerName);
+                this.columnBalanc = new global::System.Data.DataColumn("Balanc", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBalanc);
+                this.columnDeposit = new global::System.Data.DataColumn("Deposit", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDeposit);
+                this.columnSubTotal = new global::System.Data.DataColumn("SubTotal", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubTotal);
+                this.columnGrandTotal = new global::System.Data.DataColumn("GrandTotal", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrandTotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -547,6 +673,26 @@ namespace WinForm.Reports.SaleOrderItem {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SaleOrderItemDataTable : global::System.Data.TypedTableBase<SaleOrderItemRow> {
             
+            private global::System.Data.DataColumn columnProId;
+            
+            private global::System.Data.DataColumn columnProNameEn;
+            
+            private global::System.Data.DataColumn columnProNameKh;
+            
+            private global::System.Data.DataColumn columnMeasure;
+            
+            private global::System.Data.DataColumn columnCategory;
+            
+            private global::System.Data.DataColumn columnQty;
+            
+            private global::System.Data.DataColumn columnPercent;
+            
+            private global::System.Data.DataColumn columnVAT;
+            
+            private global::System.Data.DataColumn columnPrice;
+            
+            private global::System.Data.DataColumn columnAmount;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SaleOrderItemDataTable() {
@@ -578,6 +724,86 @@ namespace WinForm.Reports.SaleOrderItem {
             protected SaleOrderItemDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProIdColumn {
+                get {
+                    return this.columnProId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProNameEnColumn {
+                get {
+                    return this.columnProNameEn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProNameKhColumn {
+                get {
+                    return this.columnProNameKh;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MeasureColumn {
+                get {
+                    return this.columnMeasure;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CategoryColumn {
+                get {
+                    return this.columnCategory;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QtyColumn {
+                get {
+                    return this.columnQty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PercentColumn {
+                get {
+                    return this.columnPercent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VATColumn {
+                get {
+                    return this.columnVAT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PriceColumn {
+                get {
+                    return this.columnPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AmountColumn {
+                get {
+                    return this.columnAmount;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -617,9 +843,19 @@ namespace WinForm.Reports.SaleOrderItem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SaleOrderItemRow AddSaleOrderItemRow() {
+            public SaleOrderItemRow AddSaleOrderItemRow(int ProId, string ProNameEn, string ProNameKh, string Measure, string Category, int Qty, float Percent, float VAT, float Price, float Amount) {
                 SaleOrderItemRow rowSaleOrderItemRow = ((SaleOrderItemRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
+                object[] columnValuesArray = new object[] {
+                        ProId,
+                        ProNameEn,
+                        ProNameKh,
+                        Measure,
+                        Category,
+                        Qty,
+                        Percent,
+                        VAT,
+                        Price,
+                        Amount};
                 rowSaleOrderItemRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSaleOrderItemRow);
                 return rowSaleOrderItemRow;
@@ -642,11 +878,41 @@ namespace WinForm.Reports.SaleOrderItem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnProId = base.Columns["ProId"];
+                this.columnProNameEn = base.Columns["ProNameEn"];
+                this.columnProNameKh = base.Columns["ProNameKh"];
+                this.columnMeasure = base.Columns["Measure"];
+                this.columnCategory = base.Columns["Category"];
+                this.columnQty = base.Columns["Qty"];
+                this.columnPercent = base.Columns["Percent"];
+                this.columnVAT = base.Columns["VAT"];
+                this.columnPrice = base.Columns["Price"];
+                this.columnAmount = base.Columns["Amount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnProId = new global::System.Data.DataColumn("ProId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProId);
+                this.columnProNameEn = new global::System.Data.DataColumn("ProNameEn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProNameEn);
+                this.columnProNameKh = new global::System.Data.DataColumn("ProNameKh", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProNameKh);
+                this.columnMeasure = new global::System.Data.DataColumn("Measure", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMeasure);
+                this.columnCategory = new global::System.Data.DataColumn("Category", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory);
+                this.columnQty = new global::System.Data.DataColumn("Qty", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQty);
+                this.columnPercent = new global::System.Data.DataColumn("Percent", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPercent);
+                this.columnVAT = new global::System.Data.DataColumn("VAT", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVAT);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
+                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -786,6 +1052,258 @@ namespace WinForm.Reports.SaleOrderItem {
                     base(rb) {
                 this.tableSaleOrder = ((SaleOrderDataTable)(this.Table));
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SaleOrderId {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleOrder.SaleOrderIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SaleOrderId\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.SaleOrderIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float Percent {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrder.PercentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Percent\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.PercentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float DisA {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrder.DisAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DisA\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.DisAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string UserName {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleOrder.UserNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserName\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.UserNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CustomerName {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleOrder.CustomerNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerName\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.CustomerNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float Balanc {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrder.BalancColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Balanc\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.BalancColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float Deposit {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrder.DepositColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Deposit\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.DepositColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float SubTotal {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrder.SubTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubTotal\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.SubTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float GrandTotal {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrder.GrandTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GrandTotal\' in table \'SaleOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrder.GrandTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSaleOrderIdNull() {
+                return this.IsNull(this.tableSaleOrder.SaleOrderIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSaleOrderIdNull() {
+                this[this.tableSaleOrder.SaleOrderIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPercentNull() {
+                return this.IsNull(this.tableSaleOrder.PercentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPercentNull() {
+                this[this.tableSaleOrder.PercentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDisANull() {
+                return this.IsNull(this.tableSaleOrder.DisAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDisANull() {
+                this[this.tableSaleOrder.DisAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUserNameNull() {
+                return this.IsNull(this.tableSaleOrder.UserNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUserNameNull() {
+                this[this.tableSaleOrder.UserNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCustomerNameNull() {
+                return this.IsNull(this.tableSaleOrder.CustomerNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCustomerNameNull() {
+                this[this.tableSaleOrder.CustomerNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBalancNull() {
+                return this.IsNull(this.tableSaleOrder.BalancColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBalancNull() {
+                this[this.tableSaleOrder.BalancColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDepositNull() {
+                return this.IsNull(this.tableSaleOrder.DepositColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDepositNull() {
+                this[this.tableSaleOrder.DepositColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSubTotalNull() {
+                return this.IsNull(this.tableSaleOrder.SubTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSubTotalNull() {
+                this[this.tableSaleOrder.SubTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGrandTotalNull() {
+                return this.IsNull(this.tableSaleOrder.GrandTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGrandTotalNull() {
+                this[this.tableSaleOrder.GrandTotalColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -800,6 +1318,286 @@ namespace WinForm.Reports.SaleOrderItem {
             internal SaleOrderItemRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableSaleOrderItem = ((SaleOrderItemDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ProId {
+                get {
+                    try {
+                        return ((int)(this[this.tableSaleOrderItem.ProIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProId\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.ProIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ProNameEn {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleOrderItem.ProNameEnColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProNameEn\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.ProNameEnColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ProNameKh {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleOrderItem.ProNameKhColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProNameKh\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.ProNameKhColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Measure {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleOrderItem.MeasureColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Measure\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.MeasureColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category {
+                get {
+                    try {
+                        return ((string)(this[this.tableSaleOrderItem.CategoryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.CategoryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Qty {
+                get {
+                    try {
+                        return ((int)(this[this.tableSaleOrderItem.QtyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Qty\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.QtyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float Percent {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrderItem.PercentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Percent\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.PercentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float VAT {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrderItem.VATColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VAT\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.VATColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float Price {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrderItem.PriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public float Amount {
+                get {
+                    try {
+                        return ((float)(this[this.tableSaleOrderItem.AmountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'SaleOrderItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSaleOrderItem.AmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProIdNull() {
+                return this.IsNull(this.tableSaleOrderItem.ProIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProIdNull() {
+                this[this.tableSaleOrderItem.ProIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProNameEnNull() {
+                return this.IsNull(this.tableSaleOrderItem.ProNameEnColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProNameEnNull() {
+                this[this.tableSaleOrderItem.ProNameEnColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProNameKhNull() {
+                return this.IsNull(this.tableSaleOrderItem.ProNameKhColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProNameKhNull() {
+                this[this.tableSaleOrderItem.ProNameKhColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMeasureNull() {
+                return this.IsNull(this.tableSaleOrderItem.MeasureColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMeasureNull() {
+                this[this.tableSaleOrderItem.MeasureColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategoryNull() {
+                return this.IsNull(this.tableSaleOrderItem.CategoryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategoryNull() {
+                this[this.tableSaleOrderItem.CategoryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQtyNull() {
+                return this.IsNull(this.tableSaleOrderItem.QtyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQtyNull() {
+                this[this.tableSaleOrderItem.QtyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPercentNull() {
+                return this.IsNull(this.tableSaleOrderItem.PercentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPercentNull() {
+                this[this.tableSaleOrderItem.PercentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVATNull() {
+                return this.IsNull(this.tableSaleOrderItem.VATColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVATNull() {
+                this[this.tableSaleOrderItem.VATColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPriceNull() {
+                return this.IsNull(this.tableSaleOrderItem.PriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPriceNull() {
+                this[this.tableSaleOrderItem.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAmountNull() {
+                return this.IsNull(this.tableSaleOrderItem.AmountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAmountNull() {
+                this[this.tableSaleOrderItem.AmountColumn] = global::System.Convert.DBNull;
             }
         }
         

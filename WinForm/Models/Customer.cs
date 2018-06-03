@@ -12,7 +12,6 @@ namespace WinForm.Models
     {
         [Key]
         public int CusId { get; set; }
-
         [Required]
         public string Name { get; set; }
         public string Sex { get; set; }
@@ -20,5 +19,6 @@ namespace WinForm.Models
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Note { get; set; }
+        public IEnumerable<SaleOrder> SaleOrders { get; set; }
     }
 }

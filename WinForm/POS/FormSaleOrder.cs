@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design.Serialization;
+using System.Data;
 using System.Data.Entity;
 using System.Globalization;
 using System.Linq;
@@ -8,9 +9,12 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using CrystalDecisions.Shared;
 using DevComponents.DotNetBar;
+using FastMember;
 using WinForm.Inventory.ProductMaster;
 using WinForm.Models;
 using WinForm.Models.Support;
+using WinForm.Reports.ReceiveItems;
+using WinForm.Reports.SaleOrderItem;
 
 namespace WinForm.POS
 {
@@ -22,6 +26,7 @@ namespace WinForm.POS
         {
             _appContext = new AppContext();
             InitializeComponent();
+            
         }
 
 
@@ -218,7 +223,7 @@ namespace WinForm.POS
             {
                 SaleOrderId = txtSaleOrderID.Text,
                 SaleDate = Convert.ToDateTime(Convert.ToDateTime(dateSaleOrder.Text).ToShortDateString()),
-                CustomerId = Convert.ToInt32(txtCustomerID.Text),
+                CusId = Convert.ToInt32(txtCustomerID.Text),
                 UserId = CurrentUser.GetCurrentUserId,
                 SaleType = SaleType.SaleOrder,
                 SubTotal = float.Parse(txtSubtotal.Text.Replace("$", "")),
@@ -254,7 +259,74 @@ namespace WinForm.POS
 
             }
             _appContext.SaveChanges();
-            MyMessage.Success("Saved");
+            var dialog = MessageBox.Show("Do you want print Report?", "Information", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Asterisk);
+            if (dialog == DialogResult.Yes)
+            {
+                var so = _appContext.SaleOrders
+                    .Where(id => id.SaleOrderId.Equals(txtSaleOrderID.Text))
+                    .Include(u => u.User)
+                    .Include(c => c.Customer)
+                    .Select(s=>new
+                    {
+                        SaleOrderId = s.SaleOrderId,
+                        Percent = s.DisPercent,
+                        DisA = s.DisAmount,
+                        UserName = s.User.UserNmae,
+                        CustomerName = s.Customer.Name,
+                        Balanc = s.Balance,
+                        Deposit = s.Deposit,
+                        SubTotal = s.SubTotal,
+                        GrandTotal= s.GrandTotal
+                    })
+                    .ToList();
+
+                var soi = _appContext.SaleOrderItems
+                    .Where(id => id.SaleOrderId.Equals(txtSaleOrderID.Text))
+                    .Include(p => p.Product)
+                    .Include(c => c.Product.Category)
+                    .Include(m => m.Product.Measure)
+                    .Include(w => w.Warehouse)
+                    .Select(i => new
+                    {
+                        ProId = i.ProductId,
+                        ProNameEn = i.Product.NameEn,
+                        ProNameKh = i.Product.NameKh,
+                        Measure = i.Product.Measure.Name,
+                        Category = i.Product.Category.Name,
+                        Qty = i.Qty,
+                        Percent =i.DisPercent,
+                        VAT = i.VatPercent,
+                        Price = i.Price,
+                        Amount = i.Amount
+                    })
+                    .ToList();
+
+                var dtSaleOrder = new DataTable();
+                using (var reader =ObjectReader.Create(so))
+                {
+                    dtSaleOrder.Load(reader);
+                }
+                dtSaleOrder.TableName = "SaleOrder";
+
+                var dtSaleOrderItem = new DataTable();
+                using (var reader =ObjectReader.Create(soi))
+                {
+                    dtSaleOrderItem.Load(reader);
+                }
+                dtSaleOrderItem.TableName = "SaleOrderItem";
+
+
+                var ds = new dsSaleOrder();
+                ds.Merge(dtSaleOrder);
+                ds.Merge(dtSaleOrderItem);
+
+                var crpt = new crptSaleOrder();
+                crpt.SetDataSource(ds);
+                var frmReport = new FormSaleOrderReport(crpt);
+                frmReport.ShowDialog();
+            }
+
 
         }
     }

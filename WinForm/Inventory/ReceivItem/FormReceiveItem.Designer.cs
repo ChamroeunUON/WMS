@@ -1,7 +1,11 @@
-﻿namespace WinForm.Inventory.ReceivItem
+﻿using System.Windows.Forms;
+using WinForm.Models;
+using WinForm.Models.Support;
+
+namespace WinForm.Inventory.ReceivItem
 {
     partial class FormReceiveItem
-    {
+    { 
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -16,6 +20,7 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+                _appContext.Dispose();
             }
             base.Dispose(disposing);
         }

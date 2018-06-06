@@ -339,7 +339,6 @@ C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\DevComponents.DotNetBa
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\DevComponents.Instrumentation.xml
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\EntityFramework.xml
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Administrator.Employee.frmEmployee.resources
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Administrator.FormCategory.FrmCategory.resources
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Administrator.frmCustomer.resources
@@ -428,3 +427,6 @@ C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\Interop.CrystalReportV
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.ResolveComReference.cache
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.SeedDefualtInformation.resources
 C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.Migrations.SeedProduct.resources
+C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csprojAssemblyReference.cache
+C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.CoreCompileInputs.cache
+C:\Users\Chamroeun\Documents\GitHub\WMS\WinForm\obj\Debug\WinForm.csproj.CopyComplete

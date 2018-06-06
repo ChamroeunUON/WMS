@@ -259,7 +259,7 @@ namespace WinForm.POS
 
             }
             _appContext.SaveChanges();
-            var dialog = MessageBox.Show("Do you want print Report?", "Information", MessageBoxButtons.YesNo,
+            var dialog = MessageBox.Show(@"Do you want print Report?", @"Information", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Asterisk);
             if (dialog == DialogResult.Yes)
             {
